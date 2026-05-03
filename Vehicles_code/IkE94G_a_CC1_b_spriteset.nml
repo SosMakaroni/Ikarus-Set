@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE94G_a_CC1_b.png
+
+spriteset(ss_IkE94G_a_CC1_b, "gfx/EAG/IkE94G_a_CC1_b.png") {
+    [    0,    0,   7,  18,  -4,  -9, ANIM ]
+    [   11,    0,  20,  17, -10,  -9, ANIM ]
+    [   35,    0,  20,  12, -10,  -6, ANIM ]
+    [   59,    0,  19,  16, -10,  -8, ANIM ]
+    [   82,    0,   7,  17,  -4,  -9, ANIM ]
+    [   93,    0,  19,  16, -10,  -8, ANIM ]
+    [  116,    0,  20,  12, -10,  -6, ANIM ]
+    [  140,    0,  20,  17, -10,  -9, ANIM ]
+}
+
+spriteset(ss_IkE94G_a_CC1_b_loading, "gfx/EAG/IkE94G_a_CC1_b.png") {
+    [  211,    0,   7,  18,  -4,  -9, ANIM ]
+    [  222,    0,  20,  17, -10,  -9, ANIM ]
+    [  246,    0,  20,  12, -10,  -6, ANIM ]
+    [  270,    0,  19,  16, -10,  -8, ANIM ]
+    [  293,    0,   7,  17,  -4,  -9, ANIM ]
+    [  304,    0,  19,  16, -10,  -8, ANIM ]
+    [  327,    0,  20,  12, -10,  -6, ANIM ]
+    [  351,    0,  20,  17, -10,  -9, ANIM ]
+}
+
+spriteset(ss_IkE94G_a_CC1_b_purchase, "gfx/EAG/IkE94G_a_CC1_b.png") {
+    [   35,    0,  20,  12, -10,  -6, ANIM ]
+}
+

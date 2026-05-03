@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik260cng_a_CC1.png
+
+spriteset(ss_Ik260cng_a_CC1, "gfx/2xx/Ik260cng_a_CC1.png") {
+    [    0,    0,   7,  18,  -4,  -9, ANIM ]
+    [   10,    0,  23,  18, -12,  -9, ANIM ]
+    [   36,    0,  26,  12, -13,  -6, ANIM ]
+    [   66,    0,  23,  18, -12,  -9, ANIM ]
+    [   93,    0,   7,  18,  -4,  -9, ANIM ]
+    [  104,    0,  23,  18, -12,  -9, ANIM ]
+    [  131,    0,  26,  12, -13,  -6, ANIM ]
+    [  160,    0,  23,  18, -12,  -9, ANIM ]
+}
+
+spriteset(ss_Ik260cng_a_CC1_loading, "gfx/2xx/Ik260cng_a_CC1.png") {
+    [  196,    0,   7,  18,  -4,  -9, ANIM ]
+    [  206,    0,  23,  18, -12,  -9, ANIM ]
+    [  232,    0,  26,  12, -13,  -6, ANIM ]
+    [  262,    0,  23,  18, -12,  -9, ANIM ]
+    [  289,    0,   7,  18,  -4,  -9, ANIM ]
+    [  300,    0,  23,  18, -12,  -9, ANIM ]
+    [  327,    0,  26,  12, -13,  -6, ANIM ]
+    [  356,    0,  23,  18, -12,  -9, ANIM ]
+}
+
+spriteset(ss_Ik260cng_a_CC1_purchase, "gfx/2xx/Ik260cng_a_CC1.png") {
+    [   36,    0,  26,  12, -13,  -6, ANIM ]
+}
+

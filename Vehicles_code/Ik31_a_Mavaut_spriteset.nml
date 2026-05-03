@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik31_a_Mavaut.png
+
+spriteset(ss_Ik31_a_Mavaut, "gfx/Old/Ik31_a_Mavaut.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   14,    0,  19,  16, -10,  -8, ANIM ]
+    [   37,    0,  22,  11, -11,  -6, ANIM ]
+    [   64,    0,  20,  16, -10,  -8, ANIM ]
+    [   89,    0,   7,  16,  -4,  -8, ANIM ]
+    [   99,    0,  20,  16, -10,  -8, ANIM ]
+    [  124,    0,  22,  11, -11,  -6, ANIM ]
+    [  151,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik31_a_Mavaut_loading, "gfx/Old/Ik31_a_Mavaut.png") {
+    [  181,    0,   7,  16,  -4,  -8, ANIM ]
+    [  195,    0,  19,  16, -10,  -8, ANIM ]
+    [  218,    0,  22,  11, -11,  -6, ANIM ]
+    [  245,    0,  20,  16, -10,  -8, ANIM ]
+    [  270,    0,   7,  16,  -4,  -8, ANIM ]
+    [  280,    0,  20,  16, -10,  -8, ANIM ]
+    [  305,    0,  22,  11, -11,  -6, ANIM ]
+    [  332,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik31_a_Mavaut_purchase, "gfx/Old/Ik31_a_Mavaut.png") {
+    [   37,    0,  22,  11, -11,  -6, ANIM ]
+}
+

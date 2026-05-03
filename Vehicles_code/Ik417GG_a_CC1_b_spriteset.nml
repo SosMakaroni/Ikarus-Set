@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik417GG_a_CC1_b.png
+
+spriteset(ss_Ik417GG_a_CC1_b, "gfx/4xx/Ik417GG_a_CC1_b.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   10,    0,  19,  16, -10,  -8, ANIM ]
+    [   33,    0,  20,  12, -10,  -6, ANIM ]
+    [   57,    0,  19,  17, -10,  -9, ANIM ]
+    [   79,    0,   7,  16,  -4,  -8, ANIM ]
+    [   89,    0,  19,  17, -10,  -9, ANIM ]
+    [  112,    0,  20,  12, -10,  -6, ANIM ]
+    [  136,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik417GG_a_CC1_b_loading, "gfx/4xx/Ik417GG_a_CC1_b.png") {
+    [  205,    0,   7,  16,  -4,  -8, ANIM ]
+    [  215,    0,  19,  16, -10,  -8, ANIM ]
+    [  238,    0,  20,  12, -10,  -6, ANIM ]
+    [  262,    0,  19,  17, -10,  -9, ANIM ]
+    [  284,    0,   7,  16,  -4,  -8, ANIM ]
+    [  294,    0,  19,  17, -10,  -9, ANIM ]
+    [  317,    0,  20,  12, -10,  -6, ANIM ]
+    [  341,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik417GG_a_CC1_b_purchase, "gfx/4xx/Ik417GG_a_CC1_b.png") {
+    [   33,    0,  20,  12, -10,  -6, ANIM ]
+}
+

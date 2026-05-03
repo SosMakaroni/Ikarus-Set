@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE99_a_CC1.png
+
+spriteset(ss_IkE99_a_CC1, "gfx/EAG/IkE99_a_CC1.png") {
+    [    0,    0,   7,  22,  -4, -11, ANIM ]
+    [   11,    0,  26,  23, -13, -12, ANIM ]
+    [   41,    0,  32,  16, -16,  -8, ANIM ]
+    [   77,    0,  26,  23, -13, -12, ANIM ]
+    [  107,    0,   7,  22,  -4, -11, ANIM ]
+    [  118,    0,  26,  23, -13, -12, ANIM ]
+    [  148,    0,  32,  16, -16,  -8, ANIM ]
+    [  184,    0,  26,  23, -13, -12, ANIM ]
+}
+
+spriteset(ss_IkE99_a_CC1_loading, "gfx/EAG/IkE99_a_CC1.png") {
+    [  214,    0,   7,  22,  -4, -11, ANIM ]
+    [  225,    0,  26,  23, -13, -12, ANIM ]
+    [  255,    0,  32,  16, -16,  -8, ANIM ]
+    [  291,    0,  26,  23, -13, -12, ANIM ]
+    [  321,    0,   7,  22,  -4, -11, ANIM ]
+    [  332,    0,  26,  23, -13, -12, ANIM ]
+    [  362,    0,  32,  16, -16,  -8, ANIM ]
+    [  398,    0,  26,  23, -13, -12, ANIM ]
+}
+
+spriteset(ss_IkE99_a_CC1_purchase, "gfx/EAG/IkE99_a_CC1.png") {
+    [   41,    0,  32,  16, -16,  -8, ANIM ]
+}
+

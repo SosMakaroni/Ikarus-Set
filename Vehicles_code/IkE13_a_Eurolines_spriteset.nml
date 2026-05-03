@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE13_a_Eurolines.png
+
+spriteset(ss_IkE13_a_Eurolines, "gfx/EAG/IkE13_a_Eurolines.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   11,    0,  19,  16, -10,  -8, ANIM ]
+    [   33,    0,  22,  12, -11,  -6, ANIM ]
+    [   59,    0,  19,  16, -10,  -8, ANIM ]
+    [   81,    0,   7,  16,  -4,  -8, ANIM ]
+    [   92,    1,  19,  16, -10,  -8, ANIM ]
+    [  115,    1,  22,  12, -11,  -6, ANIM ]
+    [  141,    1,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkE13_a_Eurolines_loading, "gfx/EAG/IkE13_a_Eurolines.png") {
+    [  166,    1,   7,  16,  -4,  -8, ANIM ]
+    [  177,    1,  19,  16, -10,  -8, ANIM ]
+    [  199,    1,  22,  12, -11,  -6, ANIM ]
+    [  225,    1,  19,  16, -10,  -8, ANIM ]
+    [  247,    1,   7,  16,  -4,  -8, ANIM ]
+    [  258,    2,  19,  16, -10,  -8, ANIM ]
+    [  281,    2,  22,  12, -11,  -6, ANIM ]
+    [  307,    2,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkE13_a_Eurolines_purchase, "gfx/EAG/IkE13_a_Eurolines.png") {
+    [   33,    0,  22,  12, -11,  -6, ANIM ]
+}
+

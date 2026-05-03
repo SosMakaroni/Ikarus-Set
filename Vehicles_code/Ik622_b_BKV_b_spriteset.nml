@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik622_b_BKV_b.png
+
+spriteset(ss_Ik622_b_BKV_b, "gfx/Old/Ik622_b_BKV_b.png") {
+    [    0,    0,   7,  15,  -4,  -8, ANIM ]
+    [   10,    0,  17,  15,  -9,  -8, ANIM ]
+    [   30,    0,  19,  11, -10,  -6, ANIM ]
+    [   52,    0,  16,  14,  -8,  -7, ANIM ]
+    [   71,    0,   7,  14,  -4,  -7, ANIM ]
+    [   81,    0,  18,  14,  -9,  -7, ANIM ]
+    [  102,    0,  19,  11, -10,  -6, ANIM ]
+    [  124,    0,  17,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik622_b_BKV_b_loading, "gfx/Old/Ik622_b_BKV_b.png") {
+    [  181,    0,   7,  15,  -4,  -8, ANIM ]
+    [  191,    0,  17,  15,  -9,  -8, ANIM ]
+    [  211,    0,  19,  11, -10,  -6, ANIM ]
+    [  233,    0,  16,  14,  -8,  -7, ANIM ]
+    [  252,    0,   7,  14,  -4,  -7, ANIM ]
+    [  262,    0,  18,  14,  -9,  -7, ANIM ]
+    [  283,    0,  19,  11, -10,  -6, ANIM ]
+    [  305,    0,  17,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik622_b_BKV_b_purchase, "gfx/Old/Ik622_b_BKV_b.png") {
+    [   30,    0,  19,  11, -10,  -6, ANIM ]
+}
+

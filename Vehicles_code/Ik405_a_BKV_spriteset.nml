@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik405_a_BKV.png
+
+spriteset(ss_Ik405_a_BKV, "gfx/4xx/Ik405_a_BKV.png") {
+    [    0,    0,   7,  13,  -4,  -7, ANIM ]
+    [   10,    0,  19,  16, -10,  -8, ANIM ]
+    [   32,    0,  18,  11,  -9,  -6, ANIM ]
+    [   53,    0,  19,  16, -10,  -8, ANIM ]
+    [   75,    0,   7,  13,  -4,  -7, ANIM ]
+    [   85,    0,  19,  16, -10,  -8, ANIM ]
+    [  107,    0,  18,  11,  -9,  -6, ANIM ]
+    [  128,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik405_a_BKV_loading, "gfx/4xx/Ik405_a_BKV.png") {
+    [  151,    0,   7,  13,  -4,  -7, ANIM ]
+    [  161,    0,  19,  16, -10,  -8, ANIM ]
+    [  183,    0,  18,  11,  -9,  -6, ANIM ]
+    [  204,    0,  19,  16, -10,  -8, ANIM ]
+    [  226,    0,   7,  13,  -4,  -7, ANIM ]
+    [  236,    0,  19,  16, -10,  -8, ANIM ]
+    [  258,    0,  18,  11,  -9,  -6, ANIM ]
+    [  279,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_Ik405_a_BKV_purchase, "gfx/4xx/Ik405_a_BKV.png") {
+    [   32,    0,  18,  11,  -9,  -6, ANIM ]
+}
+

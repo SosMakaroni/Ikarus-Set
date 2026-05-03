@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik556_a_BKV.png
+
+spriteset(ss_Ik556_a_BKV, "gfx/Old/Ik556_a_BKV.png") {
+    [    0,    0,   7,  19,  -4, -10, ANIM ]
+    [   10,    0,  23,  17, -12,  -9, ANIM ]
+    [   36,    0,  27,  11, -14,  -6, ANIM ]
+    [   66,    0,  23,  18, -12,  -9, ANIM ]
+    [   92,    0,   7,  19,  -4, -10, ANIM ]
+    [  102,    0,  23,  18, -12,  -9, ANIM ]
+    [  128,    0,  27,  11, -14,  -6, ANIM ]
+    [  158,    0,  23,  17, -12,  -9, ANIM ]
+}
+
+spriteset(ss_Ik556_a_BKV_loading, "gfx/Old/Ik556_a_BKV.png") {
+    [  185,    0,   7,  19,  -4, -10, ANIM ]
+    [  195,    0,  23,  17, -12,  -9, ANIM ]
+    [  221,    0,  27,  11, -14,  -6, ANIM ]
+    [  251,    0,  23,  18, -12,  -9, ANIM ]
+    [  277,    0,   7,  19,  -4, -10, ANIM ]
+    [  287,    0,  23,  18, -12,  -9, ANIM ]
+    [  313,    0,  27,  11, -14,  -6, ANIM ]
+    [  343,    0,  23,  17, -12,  -9, ANIM ]
+}
+
+spriteset(ss_Ik556_a_BKV_purchase, "gfx/Old/Ik556_a_BKV.png") {
+    [   36,    0,  27,  11, -14,  -6, ANIM ]
+}
+

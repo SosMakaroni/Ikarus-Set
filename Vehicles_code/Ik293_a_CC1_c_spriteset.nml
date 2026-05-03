@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik293_a_CC1_c.png
+
+spriteset(ss_Ik293_a_CC1_c, "gfx/2xx/Ik293_a_CC1_c.png") {
+    [    0,    0,   7,  14,  -4,  -7, ANIM ]
+    [   11,    0,  18,  15,  -9,  -8, ANIM ]
+    [   33,    0,  17,  11,  -9,  -6, ANIM ]
+    [   54,    0,  17,  15,  -9,  -8, ANIM ]
+    [   75,    0,   7,  14,  -4,  -7, ANIM ]
+    [   86,    0,  17,  15,  -9,  -8, ANIM ]
+    [  107,    0,  17,  11,  -9,  -6, ANIM ]
+    [  128,    0,  18,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik293_a_CC1_c_loading, "gfx/2xx/Ik293_a_CC1_c.png") {
+    [  187,    0,   7,  14,  -4,  -7, ANIM ]
+    [  198,    0,  18,  15,  -9,  -8, ANIM ]
+    [  220,    0,  17,  11,  -9,  -6, ANIM ]
+    [  241,    0,  17,  15,  -9,  -8, ANIM ]
+    [  262,    0,   7,  14,  -4,  -7, ANIM ]
+    [  273,    0,  17,  15,  -9,  -8, ANIM ]
+    [  294,    0,  17,  11,  -9,  -6, ANIM ]
+    [  315,    0,  18,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik293_a_CC1_c_purchase, "gfx/2xx/Ik293_a_CC1_c.png") {
+    [   33,    0,  17,  11,  -9,  -6, ANIM ]
+}
+

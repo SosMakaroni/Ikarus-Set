@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik280_e_CC1_b.png
+
+spriteset(ss_Ik280_e_CC1_b, "gfx/2xx/Ik280_e_CC1_b.png") {
+    [    0,    0,   7,  14,  -4,  -7, ANIM ]
+    [   11,    0,  18,  15,  -9,  -8, ANIM ]
+    [   33,    0,  17,  11,  -9,  -6, ANIM ]
+    [   54,    0,  17,  15,  -9,  -8, ANIM ]
+    [   75,    0,   7,  14,  -4,  -7, ANIM ]
+    [   86,    0,  17,  15,  -9,  -8, ANIM ]
+    [  107,    0,  17,  11,  -9,  -6, ANIM ]
+    [  128,    0,  18,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik280_e_CC1_b_loading, "gfx/2xx/Ik280_e_CC1_b.png") {
+    [  191,    0,   7,  14,  -4,  -7, ANIM ]
+    [  202,    0,  18,  15,  -9,  -8, ANIM ]
+    [  224,    0,  17,  11,  -9,  -6, ANIM ]
+    [  245,    0,  17,  15,  -9,  -8, ANIM ]
+    [  266,    0,   7,  14,  -4,  -7, ANIM ]
+    [  277,    0,  17,  15,  -9,  -8, ANIM ]
+    [  298,    0,  17,  11,  -9,  -6, ANIM ]
+    [  319,    0,  18,  15,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik280_e_CC1_b_purchase, "gfx/2xx/Ik280_e_CC1_b.png") {
+    [   33,    0,  17,  11,  -9,  -6, ANIM ]
+}
+

@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE98_a_Volan.png
+
+spriteset(ss_IkE98_a_Volan, "gfx/EAG/IkE98_a_Volan.png") {
+    [    0,    0,   7,  20,  -4, -10, ANIM ]
+    [   11,    0,  26,  20, -13, -10, ANIM ]
+    [   41,    0,  32,  13, -16,  -7, ANIM ]
+    [   77,    0,  26,  20, -13, -10, ANIM ]
+    [  107,    0,   7,  21,  -4, -11, ANIM ]
+    [  118,    0,  26,  20, -13, -10, ANIM ]
+    [  148,    0,  32,  13, -16,  -7, ANIM ]
+    [  184,    0,  26,  20, -13, -10, ANIM ]
+}
+
+spriteset(ss_IkE98_a_Volan_loading, "gfx/EAG/IkE98_a_Volan.png") {
+    [  218,    0,   7,  20,  -4, -10, ANIM ]
+    [  229,    0,  26,  20, -13, -10, ANIM ]
+    [  259,    0,  32,  13, -16,  -7, ANIM ]
+    [  295,    0,  26,  20, -13, -10, ANIM ]
+    [  325,    0,   7,  21,  -4, -11, ANIM ]
+    [  336,    0,  26,  20, -13, -10, ANIM ]
+    [  366,    0,  32,  13, -16,  -7, ANIM ]
+    [  402,    0,  26,  20, -13, -10, ANIM ]
+}
+
+spriteset(ss_IkE98_a_Volan_purchase, "gfx/EAG/IkE98_a_Volan.png") {
+    [   41,    0,  32,  13, -16,  -7, ANIM ]
+}
+

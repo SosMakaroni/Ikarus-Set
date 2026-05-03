@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik556DD_a_Mavaut.png
+
+spriteset(ss_Ik556DD_a_Mavaut, "gfx/Old/Ik556DD_a_Mavaut.png") {
+    [    0,    0,   7,  23,  -4, -12, ANIM ]
+    [   10,    0,  23,  21, -12, -11, ANIM ]
+    [   36,    0,  27,  15, -14,  -8, ANIM ]
+    [   66,    0,  23,  22, -12, -11, ANIM ]
+    [   92,    0,   7,  23,  -4, -12, ANIM ]
+    [  102,    0,  23,  22, -12, -11, ANIM ]
+    [  128,    0,  27,  15, -14,  -8, ANIM ]
+    [  158,    0,  23,  21, -12, -11, ANIM ]
+}
+
+spriteset(ss_Ik556DD_a_Mavaut_loading, "gfx/Old/Ik556DD_a_Mavaut.png") {
+    [  185,    0,   7,  23,  -4, -12, ANIM ]
+    [  195,    0,  23,  21, -12, -11, ANIM ]
+    [  221,    0,  27,  15, -14,  -8, ANIM ]
+    [  251,    0,  23,  22, -12, -11, ANIM ]
+    [  277,    0,   7,  23,  -4, -12, ANIM ]
+    [  287,    0,  23,  22, -12, -11, ANIM ]
+    [  313,    0,  27,  15, -14,  -8, ANIM ]
+    [  343,    0,  23,  21, -12, -11, ANIM ]
+}
+
+spriteset(ss_Ik556DD_a_Mavaut_purchase, "gfx/Old/Ik556DD_a_Mavaut.png") {
+    [   36,    0,  27,  15, -14,  -8, ANIM ]
+}
+

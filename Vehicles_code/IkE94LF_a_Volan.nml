@@ -1,0 +1,103 @@
+// ---------- IkE94LF_a_Volan
+
+/*még kellhet
+		purchase:            ss_IkE94LF_a_Volan_purchase;
+*/
+
+spritegroup sg_IkE94LF_a_Volan {	loaded:  [ss_IkE94LF_a_Volan];	loading: [ss_IkE94LF_a_Volan_loading];}
+
+// Játékban grafika
+switch (FEAT_ROADVEHS, SELF, sw_IkE94LF_a_Volan, position_in_consist ) {
+	1: sg_IkE94LF_a_Volan;
+	ss_toldat;
+}
+
+// Csuklosítás
+switch (FEAT_ROADVEHS, SELF, sw_IkE94LF_a_Volan_articulated, extra_callback_info1) {
+	0: item_IkE94LF_a_Volan;
+	1: item_IkE94LF_a_Volan_t;
+	CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// Modelhossz
+switch (FEAT_ROADVEHS, SELF, sw_IkE94LF_a_Volan_length, position_in_consist) {
+	1: return 8;
+    return 5;
+}
+
+// Szövegek
+switch(FEAT_ROADVEHS, SELF, sw_IkE94LF_a_Volan_names, (extra_callback_info1 >> 8) & 0xFFFF) {
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_VOLAN)); // Almenü 1 név
+	return CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_ROADVEHS, SELF, sw_IkE94LF_a_Volan_texts, extra_callback_info1 & 0xFF) {
+	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_E94L), string(STR_O1_3_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
+	0x20: sw_IkE94LF_a_Volan_names; // Vásárlási lista név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_E94L), string(STR_S1_FACELIFT), string(STR_EMPTY)); // Elővásárlási név
+	return CB_RESULT_NO_TEXT;
+}
+
+// Item
+item(FEAT_ROADVEHS, item_IkE94LF_a_Volan) {
+	property {
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_E94L), string(STR_S1_FACELIFT), string(STR_EMPTY));
+		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+		introduction_date:   date(2006,01,01);
+		model_life:          1;
+		vehicle_life:        1;
+		reliability_decay:   1;
+		cargo_allow_refit:   [PASS,TOUR];
+		loading_speed:       35;
+		sprite_id:           SPRITE_ID_NEW_ROADVEH;
+		speed:               104 km/h;
+		misc_flags:          bitmask(ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:          0;
+		running_cost_base:   RUNNING_COST_ROADVEH;
+		power:               270 kW;
+		weight:              13 ton;
+		cargo_capacity:      128;
+		cargo_age_period:    185;
+		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
+		badges:              ["type/bus", "power/diesel", "flag/HU", "usage/regional"];
+		variant_group:             item_IkE94LF_a_CC1;
+	}
+	graphics {
+		default:             sw_IkE94LF_a_Volan;
+		colour_mapping:	PALETTE_IDENTITY;    // Cégszín deaktiválás, ha valós színű jármű
+		purchase:            ss_IkE94LF_a_Volan_purchase;
+		articulated_part:    sw_IkE94LF_a_Volan_articulated;
+		length:              sw_IkE94LF_a_Volan_length;
+		cost_factor:         27 * parapuco;
+		running_cost_factor: 41 * pararuco;
+		additional_text:     string(STR_GEN_DATA, 35, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_3_DOORS));
+		name:                sw_IkE94LF_a_Volan_texts; // Vásárlási almenü switch
+	}
+}
+// Csukló item
+item(FEAT_ROADVEHS, item_IkE94LF_a_Volan_t) {
+	property {
+		name:							string(STR_BUG);
+		climates_available:			bitmask(NO_CLIMATE);
+		introduction_date:				date(4999999,01,01);
+		cargo_allow_refit:				[PASS,TOUR];
+		loading_speed:					0;
+		cost_factor:					0;
+		running_cost_factor:			0;
+		sprite_id:						SPRITE_ID_NEW_ROADVEH;
+		misc_flags:					bitmask(ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:					0;
+		running_cost_base:				RUNNING_COST_NONE;
+		power:							0 kW;
+		weight:						0 ton;
+		cargo_capacity:				0;
+		cargo_age_period:				0;
+	}
+	graphics {
+		default:						sw_IkE94LF_a_Volan;
+		colour_mapping:	PALETTE_IDENTITY; // Cégszín deaktiválás, ha valós színű jármű
+		length:						sw_IkE94LF_a_Volan_length;
+	}
+}
+// ---------- IkE94LF_a_Volan --- End
+

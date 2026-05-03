@@ -1,0 +1,28 @@
+// NML Sprite Layout for TR35_a_BKV.png
+
+spriteset(ss_TR35_a_BKV, "gfx/Old/TR35_a_BKV.png") {
+    [    0,    0,   7,  15,  -4,  -8, ANIM ]
+    [   12,    0,  19,  15, -10,  -8, ANIM ]
+    [   37,    0,  20,  11, -10,  -6, ANIM ]
+    [   61,    0,  19,  15, -10,  -8, ANIM ]
+    [   86,    0,   7,  15,  -4,  -8, ANIM ]
+    [   97,    0,  19,  15, -10,  -8, ANIM ]
+    [  120,    0,  20,  11, -10,  -6, ANIM ]
+    [  146,    0,  19,  15, -10,  -8, ANIM ]
+}
+
+spriteset(ss_TR35_a_BKV_loading, "gfx/Old/TR35_a_BKV.png") {
+    [  170,    0,   7,  15,  -4,  -8, ANIM ]
+    [  182,    0,  19,  15, -10,  -8, ANIM ]
+    [  207,    0,  20,  11, -10,  -6, ANIM ]
+    [  231,    0,  19,  15, -10,  -8, ANIM ]
+    [  256,    0,   7,  15,  -4,  -8, ANIM ]
+    [  267,    0,  19,  15, -10,  -8, ANIM ]
+    [  290,    0,  20,  11, -10,  -6, ANIM ]
+    [  316,    0,  19,  15, -10,  -8, ANIM ]
+}
+
+spriteset(ss_TR35_a_BKV_purchase, "gfx/Old/TR35_a_BKV.png") {
+    [   37,    0,  20,  11, -10,  -6, ANIM ]
+}
+

@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE92_a_Zala.png
+
+spriteset(ss_IkE92_a_Zala, "gfx/EAG/IkE92_a_Zala.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   11,    0,  20,  17, -10,  -9, ANIM ]
+    [   34,    0,  24,  12, -12,  -6, ANIM ]
+    [   62,    0,  21,  17, -11,  -9, ANIM ]
+    [   87,    0,   7,  16,  -4,  -8, ANIM ]
+    [   98,    0,  21,  17, -11,  -9, ANIM ]
+    [  123,    0,  24,  12, -12,  -6, ANIM ]
+    [  151,    0,  20,  17, -10,  -9, ANIM ]
+}
+
+spriteset(ss_IkE92_a_Zala_loading, "gfx/EAG/IkE92_a_Zala.png") {
+    [  177,    0,   7,  16,  -4,  -8, ANIM ]
+    [  188,    0,  20,  17, -10,  -9, ANIM ]
+    [  211,    0,  24,  12, -12,  -6, ANIM ]
+    [  239,    0,  21,  17, -11,  -9, ANIM ]
+    [  264,    0,   7,  16,  -4,  -8, ANIM ]
+    [  275,    0,  21,  17, -11,  -9, ANIM ]
+    [  300,    0,  24,  12, -12,  -6, ANIM ]
+    [  328,    0,  20,  17, -10,  -9, ANIM ]
+}
+
+spriteset(ss_IkE92_a_Zala_purchase, "gfx/EAG/IkE92_a_Zala.png") {
+    [   34,    0,  24,  12, -12,  -6, ANIM ]
+}
+

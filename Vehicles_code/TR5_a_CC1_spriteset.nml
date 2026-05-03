@@ -1,0 +1,28 @@
+// NML Sprite Layout for TR5_a_CC1.png
+
+spriteset(ss_TR5_a_CC1, "gfx/Old/TR5_a_CC1.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   10,    0,  21,  16, -11,  -8, ANIM ]
+    [   34,    0,  24,  11, -12,  -6, ANIM ]
+    [   61,    0,  22,  16, -11,  -8, ANIM ]
+    [   86,    0,   7,  16,  -4,  -8, ANIM ]
+    [   96,    0,  22,  16, -11,  -8, ANIM ]
+    [  121,    0,  24,  11, -12,  -6, ANIM ]
+    [  148,    0,  21,  16, -11,  -8, ANIM ]
+}
+
+spriteset(ss_TR5_a_CC1_loading, "gfx/Old/TR5_a_CC1.png") {
+    [  172,    0,   7,  16,  -4,  -8, ANIM ]
+    [  182,    0,  21,  16, -11,  -8, ANIM ]
+    [  206,    0,  24,  11, -12,  -6, ANIM ]
+    [  233,    0,  22,  16, -11,  -8, ANIM ]
+    [  258,    0,   7,  16,  -4,  -8, ANIM ]
+    [  268,    0,  22,  16, -11,  -8, ANIM ]
+    [  293,    0,  24,  11, -12,  -6, ANIM ]
+    [  320,    0,  21,  16, -11,  -8, ANIM ]
+}
+
+spriteset(ss_TR5_a_CC1_purchase, "gfx/Old/TR5_a_CC1.png") {
+    [   34,    0,  24,  11, -12,  -6, ANIM ]
+}
+

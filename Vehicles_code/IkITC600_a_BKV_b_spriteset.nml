@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkITC600_a_BKV_b.png
+
+spriteset(ss_IkITC600_a_BKV_b, "gfx/Old/IkITC600_a_BKV_b.png") {
+    [    0,    0,   7,  14,  -4,  -7, ANIM ]
+    [   11,    0,  15,  13,  -8,  -7, ANIM ]
+    [   31,    0,  17,  11,  -9,  -6, ANIM ]
+    [   52,    0,  15,  13,  -8,  -7, ANIM ]
+    [   72,    0,   7,  13,  -4,  -7, ANIM ]
+    [   84,    0,  15,  13,  -8,  -7, ANIM ]
+    [  104,    0,  17,  11,  -9,  -6, ANIM ]
+    [  126,    0,  15,  13,  -8,  -7, ANIM ]
+}
+
+spriteset(ss_IkITC600_a_BKV_b_loading, "gfx/Old/IkITC600_a_BKV_b.png") {
+    [  179,    0,   7,  14,  -4,  -7, ANIM ]
+    [  190,    0,  15,  13,  -8,  -7, ANIM ]
+    [  210,    0,  17,  11,  -9,  -6, ANIM ]
+    [  231,    0,  15,  13,  -8,  -7, ANIM ]
+    [  251,    0,   7,  13,  -4,  -7, ANIM ]
+    [  263,    0,  15,  13,  -8,  -7, ANIM ]
+    [  283,    0,  17,  11,  -9,  -6, ANIM ]
+    [  305,    0,  15,  13,  -8,  -7, ANIM ]
+}
+
+spriteset(ss_IkITC600_a_BKV_b_purchase, "gfx/Old/IkITC600_a_BKV_b.png") {
+    [   31,    0,  17,  11,  -9,  -6, ANIM ]
+}
+

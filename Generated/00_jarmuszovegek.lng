@@ -1,0 +1,92 @@
+
+STR_GEN_DATA :Loading speed: {GOLD}{COMMA}{BLACK}{}{GOLD}----------{}{BLACK}Type: {GOLD}{STRING}, {STRING}, {STRING}{BLACK}
+STR_GEN_NAME :{STRING} {STRING} {STRING} {STRING}
+STR_GEN_LIVERY :{STRING} livery
+STR_GEN_INFO :{STRING} {LTBLUE}- {STRING}{BLACK}
+
+# --- Manufacturers ---
+STR_MFR_IKARUS                 :Ikarus
+
+# --- Type ---
+STR_T1_180                     :180
+STR_T1_210                     :210
+STR_T1_211                     :211
+STR_T1_212                     :212
+STR_T1_222                     :222
+STR_T1_250                     :250
+STR_T1_254                     :254
+STR_T1_255                     :255
+STR_T1_256                     :256
+STR_T1_260                     :260
+STR_T1_263                     :263
+STR_T1_266                     :266
+STR_T1_280                     :280
+STR_T1_282                     :282
+STR_T1_283                     :283
+STR_T1_284                     :284
+STR_T1_293                     :293
+STR_T1_30                      :30
+STR_T1_31                      :31
+STR_T1_315                     :315
+STR_T1_350                     :350
+STR_T1_386                     :386
+STR_T1_397                     :397
+STR_T1_405                     :405
+STR_T1_411                     :411
+STR_T1_412                     :412
+STR_T1_415                     :415
+STR_T1_417                     :417
+STR_T1_417GG                   :417GG
+STR_T1_435                     :435
+STR_T1_55                      :55
+STR_T1_556                     :556
+STR_T1_556DD                   :556DD
+STR_T1_557                     :557
+STR_T1_60                      :60
+STR_T1_601                     :601
+STR_T1_602                     :602
+STR_T1_620                     :620
+STR_T1_622                     :622
+STR_T1_630                     :630
+STR_T1_66                      :66
+STR_T1_955                     :955
+STR_T1_E13                     :E13
+STR_T1_E91                     :E91
+STR_T1_E92                     :E92
+STR_T1_E94                     :E94
+STR_T1_E94G                    :E94G
+STR_T1_E94L                    :E94L
+STR_T1_E95                     :E95
+STR_T1_E98                     :E98
+STR_T1_E99                     :E99
+STR_T1_ITC600                  :ITC600
+STR_T1_ITC601                  :ITC601
+STR_T1_TR35                    :TR35
+STR_T1_TR5                     :TR5
+
+# --- Sub1 ---
+STR_S1_TRAILER                 :+ Trailer
+STR_S1_FACELIFT                :Facelift
+STR_S1_PROTO                   :Proto
+
+# --- Other1 ---
+STR_O1_1_DOOR                  :1 door
+STR_O1_2_DOORS                 :2 doors
+STR_O1_3_DOORS                 :3 doors
+STR_O1_4_DOORS                 :4 doors
+STR_O1_5_DOORS                 :5 doors
+
+# --- Other2 ---
+STR_O2_8_4M                    :8,4m
+
+# --- Liveries ---
+STR_LIV_BKV                    :BKV
+STR_LIV_CC1                    :CC1
+STR_LIV_CC2                    :CC2
+STR_LIV_CC3                    :CC3
+STR_LIV_EUROLINES              :Eurolines
+STR_LIV_KOROS                  :Koros
+STR_LIV_MAVAUT                 :Mavaut
+STR_LIV_TOURIST                :Tourist
+STR_LIV_VOLAN                  :Volan
+STR_LIV_ZALA                   :Zala

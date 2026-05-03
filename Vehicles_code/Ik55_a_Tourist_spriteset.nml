@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik55_a_Tourist.png
+
+spriteset(ss_Ik55_a_Tourist, "gfx/Old/Ik55_a_Tourist.png") {
+    [    0,    0,   7,  19,  -4, -10, ANIM ]
+    [    8,    0,  26,  18, -13,  -9, ANIM ]
+    [   37,    0,  30,  11, -15,  -6, ANIM ]
+    [   70,    0,  26,  17, -13,  -9, ANIM ]
+    [   99,    0,   7,  19,  -4, -10, ANIM ]
+    [  108,    0,  26,  17, -13,  -9, ANIM ]
+    [  137,    0,  30,  11, -15,  -6, ANIM ]
+    [  170,    0,  26,  18, -13,  -9, ANIM ]
+}
+
+spriteset(ss_Ik55_a_Tourist_loading, "gfx/Old/Ik55_a_Tourist.png") {
+    [  201,    0,   7,  19,  -4, -10, ANIM ]
+    [  209,    0,  26,  18, -13,  -9, ANIM ]
+    [  238,    0,  30,  11, -15,  -6, ANIM ]
+    [  271,    0,  26,  17, -13,  -9, ANIM ]
+    [  300,    0,   7,  19,  -4, -10, ANIM ]
+    [  309,    0,  26,  17, -13,  -9, ANIM ]
+    [  338,    0,  30,  11, -15,  -6, ANIM ]
+    [  371,    0,  26,  18, -13,  -9, ANIM ]
+}
+
+spriteset(ss_Ik55_a_Tourist_purchase, "gfx/Old/Ik55_a_Tourist.png") {
+    [   37,    0,  30,  11, -15,  -6, ANIM ]
+}
+

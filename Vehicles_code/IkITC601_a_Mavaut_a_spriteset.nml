@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkITC601_a_Mavaut_a.png
+
+spriteset(ss_IkITC601_a_Mavaut_a, "gfx/Old/IkITC601_a_Mavaut_a.png") {
+    [    0,    0,   7,  15,  -4,  -8, ANIM ]
+    [   11,    0,  20,  16, -10,  -8, ANIM ]
+    [   35,    0,  24,  11, -12,  -6, ANIM ]
+    [   63,    0,  20,  16, -10,  -8, ANIM ]
+    [   87,    0,   7,  15,  -4,  -8, ANIM ]
+    [   98,    0,  20,  16, -10,  -8, ANIM ]
+    [  123,    0,  24,  11, -12,  -6, ANIM ]
+    [  151,    0,  20,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkITC601_a_Mavaut_a_loading, "gfx/Old/IkITC601_a_Mavaut_a.png") {
+    [  178,    0,   7,  15,  -4,  -8, ANIM ]
+    [  189,    0,  20,  16, -10,  -8, ANIM ]
+    [  213,    0,  24,  11, -12,  -6, ANIM ]
+    [  241,    0,  20,  16, -10,  -8, ANIM ]
+    [  265,    0,   7,  15,  -4,  -8, ANIM ]
+    [  276,    0,  20,  16, -10,  -8, ANIM ]
+    [  301,    0,  24,  11, -12,  -6, ANIM ]
+    [  329,    0,  20,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkITC601_a_Mavaut_a_purchase, "gfx/Old/IkITC601_a_Mavaut_a.png") {
+    [  364,    0,  40,  12, -20,  -6, ANIM ]
+}
+

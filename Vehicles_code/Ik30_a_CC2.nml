@@ -1,0 +1,103 @@
+// ---------- Ik30_a_CC2
+
+/*még kellhet
+		purchase:            ss_Ik30_a_CC2_purchase;
+*/
+
+spritegroup sg_Ik30_a_CC2 {	loaded:  [ss_Ik30_a_CC2];	loading: [ss_Ik30_a_CC2_loading];}
+
+// Játékban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik30_a_CC2, position_in_consist ) {
+	1: sg_Ik30_a_CC2;
+	ss_toldat;
+}
+
+// Csuklosítás
+switch (FEAT_ROADVEHS, SELF, sw_Ik30_a_CC2_articulated, extra_callback_info1) {
+	0: item_Ik30_a_CC2;
+	1: item_Ik30_a_CC2_t;
+	CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// Modelhossz
+switch (FEAT_ROADVEHS, SELF, sw_Ik30_a_CC2_length, position_in_consist) {
+	1: return 8;
+    return 1;
+}
+
+// Szövegek
+switch(FEAT_ROADVEHS, SELF, sw_Ik30_a_CC2_names, (extra_callback_info1 >> 8) & 0xFFFF) {
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_CC1)); // Almenü 1 név
+	return CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_ROADVEHS, SELF, sw_Ik30_a_CC2_texts, extra_callback_info1 & 0xFF) {
+	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_30), string(STR_O1_2_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
+	0x20: sw_Ik30_a_CC2_names; // Vásárlási lista név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_30), string(STR_EMPTY), string(STR_EMPTY)); // Elővásárlási név
+	return CB_RESULT_NO_TEXT;
+}
+
+// Item
+item(FEAT_ROADVEHS, item_Ik30_a_CC2) {
+	property {
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_30), string(STR_EMPTY), string(STR_EMPTY));
+		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+		introduction_date:   date(1951,01,01);
+		model_life:          20;
+		vehicle_life:        25;
+		reliability_decay:   20;
+		cargo_allow_refit:   [PASS,TOUR];
+		loading_speed:       10;
+		sprite_id:           SPRITE_ID_NEW_ROADVEH;
+		speed:               55 km/h;
+		misc_flags:          bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:          0;
+		running_cost_base:   RUNNING_COST_ROADVEH;
+		power:               62 kW;
+		weight:              4 ton;
+		cargo_capacity:      40;
+		cargo_age_period:    200;
+		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
+		badges:              ["type/bus", "power/diesel", "flag/flag_CC", "usage/city"];
+		variant_group:             item_Ik30_a_CC1;
+	}
+	graphics {
+		default:             sw_Ik30_a_CC2;
+		    // Cégszín deaktiválás, ha valós színű jármű
+		purchase:            ss_Ik30_a_CC2_purchase;
+		articulated_part:    sw_Ik30_a_CC2_articulated;
+		length:              sw_Ik30_a_CC2_length;
+		cost_factor:         7 * parapuco;
+		running_cost_factor: 10 * pararuco;
+		additional_text:     string(STR_GEN_DATA, 10, string(STR_EMPTY), string(STR_O2_8_4M), string(STR_O1_2_DOORS));
+		name:                sw_Ik30_a_CC2_texts; // Vásárlási almenü switch
+	}
+}
+// Csukló item
+item(FEAT_ROADVEHS, item_Ik30_a_CC2_t) {
+	property {
+		name:							string(STR_BUG);
+		climates_available:			bitmask(NO_CLIMATE);
+		introduction_date:				date(4999999,01,01);
+		cargo_allow_refit:				[PASS,TOUR];
+		loading_speed:					0;
+		cost_factor:					0;
+		running_cost_factor:			0;
+		sprite_id:						SPRITE_ID_NEW_ROADVEH;
+		misc_flags:					bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:					0;
+		running_cost_base:				RUNNING_COST_NONE;
+		power:							0 kW;
+		weight:						0 ton;
+		cargo_capacity:				0;
+		cargo_age_period:				0;
+	}
+	graphics {
+		default:						sw_Ik30_a_CC2;
+		 // Cégszín deaktiválás, ha valós színű jármű
+		length:						sw_Ik30_a_CC2_length;
+	}
+}
+// ---------- Ik30_a_CC2 --- End
+

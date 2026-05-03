@@ -1,0 +1,28 @@
+// NML Sprite Layout for IkE91_a_Volan.png
+
+spriteset(ss_IkE91_a_Volan, "gfx/EAG/IkE91_a_Volan.png") {
+    [    0,    0,   7,  15,  -4,  -8, ANIM ]
+    [   11,    0,  19,  16, -10,  -8, ANIM ]
+    [   34,    0,  23,  12, -12,  -6, ANIM ]
+    [   62,    0,  19,  16, -10,  -8, ANIM ]
+    [   86,    0,   7,  15,  -4,  -8, ANIM ]
+    [   98,    0,  19,  16, -10,  -8, ANIM ]
+    [  122,    0,  23,  12, -12,  -6, ANIM ]
+    [  150,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkE91_a_Volan_loading, "gfx/EAG/IkE91_a_Volan.png") {
+    [  175,    0,   7,  15,  -4,  -8, ANIM ]
+    [  186,    0,  19,  16, -10,  -8, ANIM ]
+    [  209,    0,  23,  12, -12,  -6, ANIM ]
+    [  237,    0,  19,  16, -10,  -8, ANIM ]
+    [  261,    0,   7,  15,  -4,  -8, ANIM ]
+    [  273,    0,  19,  16, -10,  -8, ANIM ]
+    [  297,    0,  23,  12, -12,  -6, ANIM ]
+    [  325,    0,  19,  16, -10,  -8, ANIM ]
+}
+
+spriteset(ss_IkE91_a_Volan_purchase, "gfx/EAG/IkE91_a_Volan.png") {
+    [   34,    0,  23,  12, -12,  -6, ANIM ]
+}
+

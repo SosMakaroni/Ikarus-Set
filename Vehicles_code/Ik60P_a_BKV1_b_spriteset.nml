@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik60P_a_BKV1_b.png
+
+spriteset(ss_Ik60P_a_BKV1_b, "gfx/Old/Ik60P_a_BKV1_b.png") {
+    [    0,    0,   7,  13,  -4,  -7, ANIM ]
+    [   11,    0,  16,  13,  -8,  -7, ANIM ]
+    [   33,    0,  18,  11,  -9,  -6, ANIM ]
+    [   53,    0,  16,  14,  -8,  -7, ANIM ]
+    [   71,    0,   7,  13,  -4,  -7, ANIM ]
+    [   81,    0,  16,  14,  -8,  -7, ANIM ]
+    [  100,    0,  18,  11,  -9,  -6, ANIM ]
+    [  122,    0,  16,  13,  -8,  -7, ANIM ]
+}
+
+spriteset(ss_Ik60P_a_BKV1_b_loading, "gfx/Old/Ik60P_a_BKV1_b.png") {
+    [  142,    0,   7,  13,  -4,  -7, ANIM ]
+    [  153,    0,  16,  13,  -8,  -7, ANIM ]
+    [  175,    0,  18,  11,  -9,  -6, ANIM ]
+    [  195,    0,  16,  14,  -8,  -7, ANIM ]
+    [  213,    0,   7,  13,  -4,  -7, ANIM ]
+    [  223,    0,  16,  14,  -8,  -7, ANIM ]
+    [  242,    0,  18,  11,  -9,  -6, ANIM ]
+    [  264,    0,  16,  13,  -8,  -7, ANIM ]
+}
+
+spriteset(ss_Ik60P_a_BKV1_b_purchase, "gfx/Old/Ik60P_a_BKV1_b.png") {
+    [   33,    0,  18,  11,  -9,  -6, ANIM ]
+}
+

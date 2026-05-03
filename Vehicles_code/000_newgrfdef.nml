@@ -1,0 +1,100 @@
+grf {
+	grfid: "HS\17\50";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	version: 10;
+	min_compatible_version: 5722;
+	param 0 {
+        param_cost_factor {
+            type: int;
+            name: string(STR_PARAM_BUY_NAME);
+            desc: string(STR_PARAM_BUY_DESC);
+            min_value: 0;
+            max_value: 4;
+            def_value: 2;
+            names: {
+					0: string(STR_PARAM_GAME_VERY_EASY);
+                    1: string(STR_PARAM_GAME_EASY);
+					2: string(STR_PARAM_GAME_NORMAL);
+					3: string(STR_PARAM_GAME_HARD);
+					4: string(STR_PARAM_GAME_VERY_HARD);
+                    };
+				}
+			}
+	param 1 {
+		param_running_cost_factor {
+            type: int;
+            name: string(STR_PARAM_MAINTENANCE_NAME);
+            desc: string(STR_PARAM_MAINTENANCE_DESC);
+            min_value: 0;
+            max_value: 4;
+            def_value: 2;
+            names: {
+					0: string(STR_PARAM_GAME_VERY_EASY);
+                    1: string(STR_PARAM_GAME_EASY);
+					2: string(STR_PARAM_GAME_NORMAL);
+					3: string(STR_PARAM_GAME_HARD);
+					4: string(STR_PARAM_GAME_VERY_HARD);
+                    };
+				}
+			}
+}
+
+parapuco = (param_cost_factor == 1) ? 2 : (param_cost_factor == 2) ? 4 : (param_cost_factor == 3) ? 8 : (param_cost_factor == 4) ? 16 : 1;
+pararuco = (param_running_cost_factor == 1) ? 2 : (param_running_cost_factor == 2) ? 4 : (param_running_cost_factor == 3) ? 8 : (param_running_cost_factor == 4) ? 16 : 1;
+
+tramtypetable  {
+	RAIL,	//SIMA
+	NBAN: [RAIL],	//Ufibi's Improved
+	NIAN: [RAIL],	//Ufibi's ISR
+	ELRL,	//FELSOVEZETEK
+	NBAE: [ELRL],	//Ufibi's Improved (EL)
+	NUAE: [ELRL],	//Ufibi's Urban (EL)
+	NUBE: [ELRL],	//Ufibi's Modern Urban (EL)
+	NUCE: [ELRL],	//Ufibi's Green (EL)
+	NIAN: [ELRL]	//Ufibi's ISR (EL)
+}
+
+cargotable {
+PASS, COAL, MAIL, OIL_, LVST, GOOD, GRAI, WOOD, IORE, STEL, VALU, PAPR, WHEA, FOOD, GOLD,RUBR, FRUT, MAIZ, CORE, WATR, DIAM, SUGR, AORE, BDMT, BEAN, BEER, BOOM, BRCK, CBLK,CERA, CERE, CLAY, CMNT, COPR, CSTI, CTAR, DYES, ENSP, FECR, FERT, FICR, FISH, FMSP, GLAS, GRVL, JAVA, KAOL, LIME, MILK, OLSD, PEAT, PETR, PHOS, PLAS, PORE, POTA, TOUR, TYRE, URAN, VEHI, WDPR, WOOL, ZINC, ACID, ALUM, BAKE, CASS, CHLO, CHSE, CIGR, COAT, COBL, COKE, ELTR, EOIL, FRVG, FUEL, FURN, IRON, LYE_, MEAT, METL, MNO2, MNSP, MOLS, MPTS, NH3_, NUTS, NICK, NITR, NKOR, NUKF, NUKW, OILI, OILD, OTI1, OTI2, OYST, O2__, PCL_, PIPE, POWR, QLME, RCYC, SALT, SASH, SEED, SESP, SGBT, SGCN, SLAG, SOAP, STAL, STCB, STSE, STSH, STST, STWR, TATO, TEXT, TBCO, TWOD, VBOD, VENG, VPTS, WSTE
+/*
+//PASSENGERS CLASS
+PASS, TOUR, 
+//MAIL CLASS
+MAIL,
+//EXPRESS CLASS
+GOOD,
+//ARMOURED CLASS
+VALU, GOLD, DIAM, 
+//BULK CLASS
+COAL, GRAI,  IORE, WHEA, MAIZ, CORE, SUGR, AORE, BEAN, GRVL, LIME, SAND, SCMT, 
+//PIECE GOODS CLASS
+LVST, WOOD, STEL, PAPR,  COPR, METL, 
+//LIQUID CLASS
+OIL_, RUBR, WATR, PETR, RFPR, 
+//EXPRESS + REFRIGERATED CLASS
+FOOD, FISH, MEAT, 
+//BULK + REFRIGERATED CLASS
+FRUT, 
+//BULK + COVERED CLASS
+CLAY, CMNT, OLSD, 
+//BULK + PIECE CLASS
+FERT, FICR, WDPR, RCYC, 
+//HAZARDOUS CLASS
+
+//PIECE GOODS + COVERED CLASS
+BDMT, WOOL, TEXT, 
+//OVERSIZED CLASS
+
+//PIECE + OVERSIZED CLASS
+GLAS, VEHI, 
+//POWDERIZED CLASS (COVER)
+
+//EXPRESS + LIQUID + REFRIGERATED
+MILK, 
+//EXPRESS + PIECE + LOQUID CLASS
+BEER, 
+//EXPRESS + PIECE CLASS
+BOOM, ENSP, FMSP, JAVA, VPTS, VENG, VBOD,*/
+}
+

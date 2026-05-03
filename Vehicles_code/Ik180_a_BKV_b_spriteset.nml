@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik180_a_BKV_b.png
+
+spriteset(ss_Ik180_a_BKV_b, "gfx/Old/Ik180_a_BKV_b.png") {
+    [    0,    0,   7,  14,  -4,  -7, ANIM ]
+    [   10,    0,  18,  16,  -9,  -8, ANIM ]
+    [   31,    0,  17,  12,  -9,  -6, ANIM ]
+    [   51,    0,  18,  15,  -9,  -8, ANIM ]
+    [   72,    0,   7,  14,  -4,  -7, ANIM ]
+    [   82,    0,  18,  15,  -9,  -8, ANIM ]
+    [  103,    0,  17,  12,  -9,  -6, ANIM ]
+    [  123,    0,  18,  16,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik180_a_BKV_b_loading, "gfx/Old/Ik180_a_BKV_b.png") {
+    [  185,    0,   7,  14,  -4,  -7, ANIM ]
+    [  195,    0,  18,  16,  -9,  -8, ANIM ]
+    [  216,    0,  17,  12,  -9,  -6, ANIM ]
+    [  236,    0,  18,  15,  -9,  -8, ANIM ]
+    [  257,    0,   7,  14,  -4,  -7, ANIM ]
+    [  267,    0,  18,  15,  -9,  -8, ANIM ]
+    [  288,    0,  17,  12,  -9,  -6, ANIM ]
+    [  308,    0,  18,  16,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik180_a_BKV_b_purchase, "gfx/Old/Ik180_a_BKV_b.png") {
+    [   31,    0,  17,  12,  -9,  -6, ANIM ]
+}
+

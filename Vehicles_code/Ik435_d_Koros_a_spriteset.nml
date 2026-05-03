@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik435_d_Koros_a.png
+
+spriteset(ss_Ik435_d_Koros_a, "gfx/4xx/Ik435_d_Koros_a.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   11,    0,  25,  19, -13, -10, ANIM ]
+    [   40,    0,  29,  11, -15,  -6, ANIM ]
+    [   72,    0,  26,  19, -13, -10, ANIM ]
+    [  100,    0,   7,  17,  -4,  -9, ANIM ]
+    [  111,    0,  26,  19, -13, -10, ANIM ]
+    [  140,    0,  29,  11, -15,  -6, ANIM ]
+    [  173,    0,  25,  19, -13, -10, ANIM ]
+}
+
+spriteset(ss_Ik435_d_Koros_a_loading, "gfx/4xx/Ik435_d_Koros_a.png") {
+    [  203,    0,   7,  16,  -4,  -8, ANIM ]
+    [  214,    0,  25,  19, -13, -10, ANIM ]
+    [  243,    0,  29,  11, -15,  -6, ANIM ]
+    [  275,    0,  26,  19, -13, -10, ANIM ]
+    [  303,    0,   7,  17,  -4,  -9, ANIM ]
+    [  314,    0,  26,  19, -13, -10, ANIM ]
+    [  343,    0,  29,  11, -15,  -6, ANIM ]
+    [  376,    0,  25,  19, -13, -10, ANIM ]
+}
+
+spriteset(ss_Ik435_d_Koros_a_purchase, "gfx/4xx/Ik435_d_Koros_a.png") {
+    [  409,    0,  50,  12, -25,  -6, ANIM ]
+}
+

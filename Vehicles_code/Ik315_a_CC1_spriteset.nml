@@ -1,0 +1,28 @@
+// NML Sprite Layout for Ik315_a_CC1.png
+
+spriteset(ss_Ik315_a_CC1, "gfx/EAG/Ik315_a_CC1.png") {
+    [    0,    0,   7,  16,  -4,  -8, ANIM ]
+    [   11,    0,  18,  16,  -9,  -8, ANIM ]
+    [   33,    0,  22,  12, -11,  -6, ANIM ]
+    [   59,    0,  18,  16,  -9,  -8, ANIM ]
+    [   81,    0,   7,  15,  -4,  -8, ANIM ]
+    [   92,    0,  18,  16,  -9,  -8, ANIM ]
+    [  114,    0,  22,  12, -11,  -6, ANIM ]
+    [  140,    0,  18,  16,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik315_a_CC1_loading, "gfx/EAG/Ik315_a_CC1.png") {
+    [  164,    0,   7,  16,  -4,  -8, ANIM ]
+    [  175,    0,  18,  16,  -9,  -8, ANIM ]
+    [  197,    0,  22,  12, -11,  -6, ANIM ]
+    [  223,    0,  18,  16,  -9,  -8, ANIM ]
+    [  245,    0,   7,  15,  -4,  -8, ANIM ]
+    [  256,    0,  18,  16,  -9,  -8, ANIM ]
+    [  278,    0,  22,  12, -11,  -6, ANIM ]
+    [  304,    0,  18,  16,  -9,  -8, ANIM ]
+}
+
+spriteset(ss_Ik315_a_CC1_purchase, "gfx/EAG/Ik315_a_CC1.png") {
+    [   33,    0,  22,  12, -11,  -6, ANIM ]
+}
+

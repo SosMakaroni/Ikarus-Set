@@ -1,0 +1,75 @@
+// ---------- TR35_a_BKV
+
+/*még kellhet
+		purchase:            ss_TR35_a_BKV_purchase;
+*/
+
+spritegroup sg_TR35_a_BKV {	loaded:  [ss_TR35_a_BKV];	loading: [ss_TR35_a_BKV_loading];}
+
+// Játékban grafika
+switch (FEAT_ROADVEHS, SELF, sw_TR35_a_BKV, position_in_consist ) {
+	sg_TR35_a_BKV;
+}
+
+// Csuklosítás
+switch (FEAT_ROADVEHS, SELF, sw_TR35_a_BKV_articulated, extra_callback_info1) {
+	0: item_TR35_a_BKV;
+	CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// Modelhossz
+switch (FEAT_ROADVEHS, SELF, sw_TR35_a_BKV_length, position_in_consist) {
+    return 8;
+}
+
+// Szövegek
+switch(FEAT_ROADVEHS, SELF, sw_TR35_a_BKV_names, (extra_callback_info1 >> 8) & 0xFFFF) {
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_BKV)); // Almenü 1 név
+	return CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_ROADVEHS, SELF, sw_TR35_a_BKV_texts, extra_callback_info1 & 0xFF) {
+	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_TR35), string(STR_O1_2_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
+	0x20: sw_TR35_a_BKV_names; // Vásárlási lista név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_TR35), string(STR_EMPTY), string(STR_EMPTY)); // Elővásárlási név
+	return CB_RESULT_NO_TEXT;
+}
+
+// Item
+item(FEAT_ROADVEHS, item_TR35_a_BKV) {
+	property {
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_TR35), string(STR_EMPTY), string(STR_EMPTY));
+		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+		introduction_date:   date(1948,01,01);
+		model_life:          1;
+		vehicle_life:        1;
+		reliability_decay:   1;
+		cargo_allow_refit:   [PASS,TOUR];
+		loading_speed:       16;
+		sprite_id:           SPRITE_ID_NEW_ROADVEH;
+		speed:               53 km/h;
+		misc_flags:          bitmask(ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:          0;
+		running_cost_base:   RUNNING_COST_ROADVEH;
+		power:               48 kW;
+		weight:              4 ton;
+		cargo_capacity:      42;
+		cargo_age_period:    200;
+		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
+		badges:              ["type/bus", "power/diesel", "flag/HU", "usage/city"];
+		variant_group:             item_TR35_a_CC1;
+	}
+	graphics {
+		default:             sw_TR35_a_BKV;
+		colour_mapping:	PALETTE_IDENTITY;    // Cégszín deaktiválás, ha valós színű jármű
+		purchase:            ss_TR35_a_BKV_purchase;
+		articulated_part:    sw_TR35_a_BKV_articulated;
+		length:              sw_TR35_a_BKV_length;
+		cost_factor:         6 * parapuco;
+		running_cost_factor: 8 * pararuco;
+		additional_text:     string(STR_GEN_DATA, 16, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_2_DOORS));
+		name:                sw_TR35_a_BKV_texts; // Vásárlási almenü switch
+	}
+}
+// ---------- TR35_a_BKV --- End
+
