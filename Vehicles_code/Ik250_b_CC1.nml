@@ -1,9 +1,10 @@
 // ---------- Ik250_b_CC1
 
-/*még kellhet
-		purchase:            ss_Ik250_b_CC1_purchase;
-*/
 
+spriteset(ss_Ik250_b_CC1_purchase, "gfx/2xx/Ik250_b.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik250_b_CC1, "gfx/2xx/Ik250_b.png")		{tmpl_1(0, 1, 0, 2)}
+spriteset(ss_Ik250_b_CC1_loading, "gfx/2xx/Ik250_b.png")		{tmpl_1(0, 1, 1, 2)}
 spritegroup sg_Ik250_b_CC1 {	loaded:  [ss_Ik250_b_CC1];	loading: [ss_Ik250_b_CC1_loading];}
 
 // Játékban grafika
@@ -70,7 +71,7 @@ item(FEAT_ROADVEHS, item_Ik250_b_CC1) {
 		length:              sw_Ik250_b_CC1_length;
 		cost_factor:         19 * parapuco;
 		running_cost_factor: 27 * pararuco;
-		additional_text:     string(STR_GEN_DATA, 12, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_2_DOORS));
+		additional_text:     string(STR_GEN_DATA, 12, string(STR_EMPTY), string(STR_O2_250_59), string(STR_O1_2_DOORS));
 		name:                sw_Ik250_b_CC1_texts; // Vásárlási almenü switch
 	}
 }

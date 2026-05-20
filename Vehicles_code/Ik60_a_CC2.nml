@@ -1,9 +1,10 @@
 // ---------- Ik60_a_CC2
 
-/*még kellhet
-		purchase:            ss_Ik60_a_CC2_purchase;
-*/
 
+spriteset(ss_Ik60_a_CC2_purchase, "gfx/Old/Ik60_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik60_a_CC2, "gfx/Old/Ik60_a.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_Ik60_a_CC2_loading, "gfx/Old/Ik60_a.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_Ik60_a_CC2 {	loaded:  [ss_Ik60_a_CC2];	loading: [ss_Ik60_a_CC2_loading];}
 
 // Játékban grafika

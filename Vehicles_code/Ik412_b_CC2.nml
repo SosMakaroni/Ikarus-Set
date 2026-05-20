@@ -1,9 +1,10 @@
 // ---------- Ik412_b_CC2
 
-/*még kellhet
-		purchase:            ss_Ik412_b_CC2_purchase;
-*/
 
+spriteset(ss_Ik412_b_CC2_purchase, "gfx/4xx/Ik412_b.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik412_b_CC2, "gfx/4xx/Ik412_b.png")		{tmpl_1(1, 1, 0, 3)}
+spriteset(ss_Ik412_b_CC2_loading, "gfx/4xx/Ik412_b.png")		{tmpl_1(1, 1, 1, 3)}
 spritegroup sg_Ik412_b_CC2 {	loaded:  [ss_Ik412_b_CC2];	loading: [ss_Ik412_b_CC2_loading];}
 
 // Játékban grafika

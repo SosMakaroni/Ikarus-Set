@@ -1,9 +1,10 @@
 // ---------- Ik250_b_Volan
 
-/*még kellhet
-		purchase:            ss_Ik250_b_Volan_purchase;
-*/
 
+spriteset(ss_Ik250_b_Volan_purchase, "gfx/2xx/Ik250_b.png")		{tmpl_purchase(2)}
+
+spriteset(ss_Ik250_b_Volan, "gfx/2xx/Ik250_b.png")		{tmpl_1(2, 1, 0, 2)}
+spriteset(ss_Ik250_b_Volan_loading, "gfx/2xx/Ik250_b.png")		{tmpl_1(2, 1, 1, 2)}
 spritegroup sg_Ik250_b_Volan {	loaded:  [ss_Ik250_b_Volan];	loading: [ss_Ik250_b_Volan_loading];}
 
 // Játékban grafika
@@ -70,7 +71,7 @@ item(FEAT_ROADVEHS, item_Ik250_b_Volan) {
 		length:              sw_Ik250_b_Volan_length;
 		cost_factor:         19 * parapuco;
 		running_cost_factor: 27 * pararuco;
-		additional_text:     string(STR_GEN_DATA, 12, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_2_DOORS));
+		additional_text:     string(STR_GEN_DATA, 12, string(STR_EMPTY), string(STR_O2_250_59), string(STR_O1_2_DOORS));
 		name:                sw_Ik250_b_Volan_texts; // Vásárlási almenü switch
 	}
 }

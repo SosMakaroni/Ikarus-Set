@@ -1,9 +1,10 @@
 // ---------- Ik397_a_Eurolines
 
-/*még kellhet
-		purchase:            ss_Ik397_a_Eurolines_purchase;
-*/
 
+spriteset(ss_Ik397_a_Eurolines_purchase, "gfx/EAG/Ik397_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik397_a_Eurolines, "gfx/EAG/Ik397_a.png")		{tmpl_1(1, 1, 0, 3)}
+spriteset(ss_Ik397_a_Eurolines_loading, "gfx/EAG/Ik397_a.png")		{tmpl_1(1, 1, 1, 3)}
 spritegroup sg_Ik397_a_Eurolines {	loaded:  [ss_Ik397_a_Eurolines];	loading: [ss_Ik397_a_Eurolines_loading];}
 
 // Játékban grafika

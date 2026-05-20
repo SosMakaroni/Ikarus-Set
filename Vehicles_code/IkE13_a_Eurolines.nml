@@ -1,9 +1,10 @@
 // ---------- IkE13_a_Eurolines
 
-/*még kellhet
-		purchase:            ss_IkE13_a_Eurolines_purchase;
-*/
 
+spriteset(ss_IkE13_a_Eurolines_purchase, "gfx/EAG/IkE13_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_IkE13_a_Eurolines, "gfx/EAG/IkE13_a.png")		{tmpl_1(1, 1, 0, 0)}
+spriteset(ss_IkE13_a_Eurolines_loading, "gfx/EAG/IkE13_a.png")		{tmpl_1(1, 1, 1, 0)}
 spritegroup sg_IkE13_a_Eurolines {	loaded:  [ss_IkE13_a_Eurolines];	loading: [ss_IkE13_a_Eurolines_loading];}
 
 // Játékban grafika

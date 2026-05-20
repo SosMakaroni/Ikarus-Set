@@ -1,9 +1,10 @@
 // ---------- Ik66_b_Volan
 
-/*még kellhet
-		purchase:            ss_Ik66_b_Volan_purchase;
-*/
 
+spriteset(ss_Ik66_b_Volan_purchase, "gfx/Old/Ik66_b.png")		{tmpl_purchase(2)}
+
+spriteset(ss_Ik66_b_Volan, "gfx/Old/Ik66_b.png")		{tmpl_1(2, 1, 0, 6)}
+spriteset(ss_Ik66_b_Volan_loading, "gfx/Old/Ik66_b.png")		{tmpl_1(2, 1, 1, 6)}
 spritegroup sg_Ik66_b_Volan {	loaded:  [ss_Ik66_b_Volan];	loading: [ss_Ik66_b_Volan_loading];}
 
 // Játékban grafika

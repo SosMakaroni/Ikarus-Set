@@ -1,13 +1,18 @@
 // ---------- Ik293_a_CC1
 
-/*még kellhet
-		purchase:            ss_Ik293_a_CC1_a_purchase;
-*/
 
+spriteset(ss_Ik293_a_CC1_purchase, "gfx/2xx/Ik293_a.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik293_a_CC1_a, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 1, 0, 1)}
+spriteset(ss_Ik293_a_CC1_a_loading, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 1, 1, 1)}
 spritegroup sg_Ik293_a_CC1_a {	loaded:  [ss_Ik293_a_CC1_a];	loading: [ss_Ik293_a_CC1_a_loading];}
 
+spriteset(ss_Ik293_a_CC1_b, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 2, 0, 0)}
+spriteset(ss_Ik293_a_CC1_b_loading, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 2, 1, 0)}
 spritegroup sg_Ik293_a_CC1_b {	loaded:  [ss_Ik293_a_CC1_b];	loading: [ss_Ik293_a_CC1_b_loading];}
 
+spriteset(ss_Ik293_a_CC1_c, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 3, 0, 0)}
+spriteset(ss_Ik293_a_CC1_c_loading, "gfx/2xx/Ik293_a.png")		{tmpl_1(0, 3, 1, 0)}
 spritegroup sg_Ik293_a_CC1_c {	loaded:  [ss_Ik293_a_CC1_c];	loading: [ss_Ik293_a_CC1_c_loading];}
 
 // Játékban grafika
@@ -75,7 +80,7 @@ item(FEAT_ROADVEHS, item_Ik293_a_CC1) {
 	graphics {
 		default:             sw_Ik293_a_CC1;
 		    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_Ik293_a_CC1_a_purchase;
+		purchase:            ss_Ik293_a_CC1_purchase;
 		articulated_part:    sw_Ik293_a_CC1_articulated;
 		length:              sw_Ik293_a_CC1_length;
 		cost_factor:         26 * parapuco;

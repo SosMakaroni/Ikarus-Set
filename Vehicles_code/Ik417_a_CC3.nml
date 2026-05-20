@@ -1,11 +1,14 @@
 // ---------- Ik417_a_CC3
 
-/*még kellhet
-		purchase:            ss_Ik417_a_CC3_a_purchase;
-*/
 
+spriteset(ss_Ik417_a_CC3_purchase, "gfx/4xx/Ik417_a.png")		{tmpl_purchase(2)}
+
+spriteset(ss_Ik417_a_CC3_a, "gfx/4xx/Ik417_a.png")		{tmpl_1(2, 1, 0, 2)}
+spriteset(ss_Ik417_a_CC3_a_loading, "gfx/4xx/Ik417_a.png")		{tmpl_1(2, 1, 1, 2)}
 spritegroup sg_Ik417_a_CC3_a {	loaded:  [ss_Ik417_a_CC3_a];	loading: [ss_Ik417_a_CC3_a_loading];}
 
+spriteset(ss_Ik417_a_CC3_b, "gfx/4xx/Ik417_a.png")		{tmpl_1(2, 2, 0, 0)}
+spriteset(ss_Ik417_a_CC3_b_loading, "gfx/4xx/Ik417_a.png")		{tmpl_1(2, 2, 1, 0)}
 spritegroup sg_Ik417_a_CC3_b {	loaded:  [ss_Ik417_a_CC3_b];	loading: [ss_Ik417_a_CC3_b_loading];}
 
 // Játékban grafika
@@ -70,7 +73,7 @@ item(FEAT_ROADVEHS, item_Ik417_a_CC3) {
 	graphics {
 		default:             sw_Ik417_a_CC3;
 		    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_Ik417_a_CC3_a_purchase;
+		purchase:            ss_Ik417_a_CC3_purchase;
 		articulated_part:    sw_Ik417_a_CC3_articulated;
 		length:              sw_Ik417_a_CC3_length;
 		cost_factor:         24 * parapuco;

@@ -88,6 +88,7 @@ def generate_nml(row, cm, maps):
     PFolder       = safe_val(row, cm['PFolder'])
     Usage         = safe_val(row, cm['Usage'])
     Flag          = safe_val(row, cm['Flag'])
+    ColorSor      = safe_val(row, cm['ColorSor'])
 
     # String ID-k kikeresése az optimalizált térképből
     m_id  = m_map.get(safe_val(row, cm['TextManufacturer']), "STR_EMPTY")
@@ -155,19 +156,44 @@ def generate_nml(row, cm, maps):
 
     # --- GRAFIKA ÉS CSUKLÓ LOGIKA (EREDETI MÁSOLATA) ---
     cs_graph2, cs_graph3, cs_graph4, cs_graph5, cs_graph6 = [], [], [], [], []
-    
-    pspr1 = [f"\t\tpurchase:            ss_{ItemID}_{Color}_purchase;"]
-    spr1 = [f"spritegroup sg_{ItemID}_{Color} {{	loaded:  [ss_{ItemID}_{Color}];	loading: [ss_{ItemID}_{Color}_loading];}}"]
-    spr2, spr3 = [], []
+
+    toldas_a, toldas_b, toldas_c = 0, 0, 0
+    if float(Hossz2 or 0) > 0: toldas_a = Hossz1
+
+    if float(Hossz4 or 0) > 0: toldas_b = Hossz3
+
+    if float(Hossz6 or 0) > 0: toldas_c = Hossz5
+
+    psprs1 = [f"spriteset(ss_{ItemID}_{Color}_purchase, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_purchase({ColorSor})}}"] # Vásárlási nézet spriteset
+    psw1 = [f"\t\tpurchase:            ss_{ItemID}_{Color}_purchase;"] # Graphic-ban a vásárlási nézet sor
+    sprs1 = [
+        f"spriteset(ss_{ItemID}_{Color}, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 0, {toldas_a})}}",
+        f"spriteset(ss_{ItemID}_{Color}_loading, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 1, {toldas_a})}}"
+    ]
+    sprg1 = [
+        f"spritegroup sg_{ItemID}_{Color} {{	loaded:  [ss_{ItemID}_{Color}];	loading: [ss_{ItemID}_{Color}_loading];}}"
+    ]
+    sprs2, sprg2, sprs3, sprg3 = [], [], [], []
     cs_graph1 = [f"\tsg_{ItemID}_{Color};"] # grafika switch
 
     if float(Hossz3 or 0) > 0:
-        pspr1 = [f"\t\tpurchase:            ss_{ItemID}_{Color}_a_purchase;"]
-        spr1 = [f"spritegroup sg_{ItemID}_{Color}_a {{	loaded:  [ss_{ItemID}_{Color}_a];	loading: [ss_{ItemID}_{Color}_a_loading];}}"]
-        spr2 = [f"spritegroup sg_{ItemID}_{Color}_b {{	loaded:  [ss_{ItemID}_{Color}_b];	loading: [ss_{ItemID}_{Color}_b_loading];}}"]
+        sprs1 = [
+            f"spriteset(ss_{ItemID}_{Color}_a, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 0, {toldas_a})}}",
+            f"spriteset(ss_{ItemID}_{Color}_a_loading, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 1, {toldas_a})}}"
+        ]
+        sprs2 = [
+            f"spriteset(ss_{ItemID}_{Color}_b, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 2, 0, {toldas_b})}}",
+            f"spriteset(ss_{ItemID}_{Color}_b_loading, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 2, 1, {toldas_b})}}"
+        ]
+        sprg1 = [f"spritegroup sg_{ItemID}_{Color}_a {{	loaded:  [ss_{ItemID}_{Color}_a];	loading: [ss_{ItemID}_{Color}_a_loading];}}"]
+        sprg2 = [f"spritegroup sg_{ItemID}_{Color}_b {{	loaded:  [ss_{ItemID}_{Color}_b];	loading: [ss_{ItemID}_{Color}_b_loading];}}"]
 
     if float(Hossz5 or 0) > 0:
-        spr3 = [f"spritegroup sg_{ItemID}_{Color}_c {{	loaded:  [ss_{ItemID}_{Color}_c];	loading: [ss_{ItemID}_{Color}_c_loading];}}"]
+        sprs3 = [
+            f"spriteset(ss_{ItemID}_{Color}_c, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 3, 0, {toldas_c})}}",
+            f"spriteset(ss_{ItemID}_{Color}_c_loading, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 3, 1, {toldas_c})}}"
+        ]
+        sprg3 = [f"spritegroup sg_{ItemID}_{Color}_c {{	loaded:  [ss_{ItemID}_{Color}_c];	loading: [ss_{ItemID}_{Color}_c_loading];}}"]
 
 
     if float(Hossz2 or 0) > 0:
@@ -287,17 +313,19 @@ def generate_nml(row, cm, maps):
 
     # --- NML ÖSSZEÁLLÍTÁSA ---
     lines = [f"// ---------- {ItemID}_{Color}", ""]
-    lines.append("/*még kellhet")
-    lines.extend(pspr1)
-    lines.append("*/")
     lines.append("")
-    lines.extend(spr1)
-    if spr2:
+    lines.extend(psprs1)
+    lines.append("")
+    lines.extend(sprs1)
+    lines.extend(sprg1)
+    if sprs2:
         lines.append("")
-        lines.extend(spr2)
-    if spr3:
+        lines.extend(sprs2)
+        lines.extend(sprg2)
+    if sprs3:
         lines.append("")
-        lines.extend(spr3)
+        lines.extend(sprs3)
+        lines.extend(sprg3)
     lines.append("")
     lines.append("// Játékban grafika")    
     lines.append(f"switch (FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}, position_in_consist ) {{")
@@ -365,7 +393,7 @@ def generate_nml(row, cm, maps):
     lines.append("\tgraphics {")
     lines.append(f"\t\tdefault:             sw_{ItemID}_{Color};")
     lines.append(f"\t\t{Recolor}    // Cégszín deaktiválás, ha valós színű jármű")
-    lines.extend(pspr1)
+    lines.extend(psw1)
     lines.append(f"\t\tarticulated_part:    sw_{ItemID}_{Color}_articulated;")
     lines.append(f"\t\tlength:              sw_{ItemID}_{Color}_length;")
     lines.append(f"\t\tcost_factor:         {PurchasePrice} * parapuco;")
@@ -450,7 +478,8 @@ def main():
         'TextSType1':'Subtype1',
         'TextSType2':'Subtype2',
         'TextOther1':'Other1',
-        'TextOther2':'Other2'
+        'TextOther2':'Other2',
+        'ColorSor':'Sor3'
     }.items()}
 
     rows = df[df[col_map['ItemID']].str.strip().astype(bool)].to_dict(orient='records')

@@ -1,11 +1,14 @@
 // ---------- Ik622_b_BKV
 
-/*még kellhet
-		purchase:            ss_Ik622_b_BKV_a_purchase;
-*/
 
+spriteset(ss_Ik622_b_BKV_purchase, "gfx/Old/Ik622_b.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik622_b_BKV_a, "gfx/Old/Ik622_b.png")		{tmpl_1(1, 1, 0, 0)}
+spriteset(ss_Ik622_b_BKV_a_loading, "gfx/Old/Ik622_b.png")		{tmpl_1(1, 1, 1, 0)}
 spritegroup sg_Ik622_b_BKV_a {	loaded:  [ss_Ik622_b_BKV_a];	loading: [ss_Ik622_b_BKV_a_loading];}
 
+spriteset(ss_Ik622_b_BKV_b, "gfx/Old/Ik622_b.png")		{tmpl_1(1, 2, 0, 0)}
+spriteset(ss_Ik622_b_BKV_b_loading, "gfx/Old/Ik622_b.png")		{tmpl_1(1, 2, 1, 0)}
 spritegroup sg_Ik622_b_BKV_b {	loaded:  [ss_Ik622_b_BKV_b];	loading: [ss_Ik622_b_BKV_b_loading];}
 
 // Játékban grafika
@@ -67,7 +70,7 @@ item(FEAT_ROADVEHS, item_Ik622_b_BKV) {
 	graphics {
 		default:             sw_Ik622_b_BKV;
 		colour_mapping:	PALETTE_IDENTITY;    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_Ik622_b_BKV_a_purchase;
+		purchase:            ss_Ik622_b_BKV_purchase;
 		articulated_part:    sw_Ik622_b_BKV_articulated;
 		length:              sw_Ik622_b_BKV_length;
 		cost_factor:         15 * parapuco;

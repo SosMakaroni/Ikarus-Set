@@ -1,11 +1,14 @@
 // ---------- IkE94G_a_Volan
 
-/*még kellhet
-		purchase:            ss_IkE94G_a_Volan_a_purchase;
-*/
 
+spriteset(ss_IkE94G_a_Volan_purchase, "gfx/EAG/IkE94G_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_IkE94G_a_Volan_a, "gfx/EAG/IkE94G_a.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_IkE94G_a_Volan_a_loading, "gfx/EAG/IkE94G_a.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_IkE94G_a_Volan_a {	loaded:  [ss_IkE94G_a_Volan_a];	loading: [ss_IkE94G_a_Volan_a_loading];}
 
+spriteset(ss_IkE94G_a_Volan_b, "gfx/EAG/IkE94G_a.png")		{tmpl_1(1, 2, 0, 0)}
+spriteset(ss_IkE94G_a_Volan_b_loading, "gfx/EAG/IkE94G_a.png")		{tmpl_1(1, 2, 1, 0)}
 spritegroup sg_IkE94G_a_Volan_b {	loaded:  [ss_IkE94G_a_Volan_b];	loading: [ss_IkE94G_a_Volan_b_loading];}
 
 // Játékban grafika
@@ -70,7 +73,7 @@ item(FEAT_ROADVEHS, item_IkE94G_a_Volan) {
 	graphics {
 		default:             sw_IkE94G_a_Volan;
 		colour_mapping:	PALETTE_IDENTITY;    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_IkE94G_a_Volan_a_purchase;
+		purchase:            ss_IkE94G_a_Volan_purchase;
 		articulated_part:    sw_IkE94G_a_Volan_articulated;
 		length:              sw_IkE94G_a_Volan_length;
 		cost_factor:         29 * parapuco;

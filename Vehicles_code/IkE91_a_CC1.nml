@@ -1,9 +1,10 @@
 // ---------- IkE91_a_CC1
 
-/*még kellhet
-		purchase:            ss_IkE91_a_CC1_purchase;
-*/
 
+spriteset(ss_IkE91_a_CC1_purchase, "gfx/EAG/IkE91_a.png")		{tmpl_purchase(0)}
+
+spriteset(ss_IkE91_a_CC1, "gfx/EAG/IkE91_a.png")		{tmpl_1(0, 1, 0, 0)}
+spriteset(ss_IkE91_a_CC1_loading, "gfx/EAG/IkE91_a.png")		{tmpl_1(0, 1, 1, 0)}
 spritegroup sg_IkE91_a_CC1 {	loaded:  [ss_IkE91_a_CC1];	loading: [ss_IkE91_a_CC1_loading];}
 
 // Játékban grafika

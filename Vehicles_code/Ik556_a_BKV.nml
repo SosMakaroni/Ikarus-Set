@@ -1,9 +1,10 @@
 // ---------- Ik556_a_BKV
 
-/*még kellhet
-		purchase:            ss_Ik556_a_BKV_purchase;
-*/
 
+spriteset(ss_Ik556_a_BKV_purchase, "gfx/Old/Ik556_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik556_a_BKV, "gfx/Old/Ik556_a.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_Ik556_a_BKV_loading, "gfx/Old/Ik556_a.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_Ik556_a_BKV {	loaded:  [ss_Ik556_a_BKV];	loading: [ss_Ik556_a_BKV_loading];}
 
 // Játékban grafika

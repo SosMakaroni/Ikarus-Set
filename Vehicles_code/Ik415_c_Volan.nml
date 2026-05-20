@@ -1,9 +1,10 @@
 // ---------- Ik415_c_Volan
 
-/*még kellhet
-		purchase:            ss_Ik415_c_Volan_purchase;
-*/
 
+spriteset(ss_Ik415_c_Volan_purchase, "gfx/4xx/Ik415_c.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik415_c_Volan, "gfx/4xx/Ik415_c.png")		{tmpl_1(1, 1, 0, 3)}
+spriteset(ss_Ik415_c_Volan_loading, "gfx/4xx/Ik415_c.png")		{tmpl_1(1, 1, 1, 3)}
 spritegroup sg_Ik415_c_Volan {	loaded:  [ss_Ik415_c_Volan];	loading: [ss_Ik415_c_Volan_loading];}
 
 // Játékban grafika

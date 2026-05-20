@@ -1,9 +1,10 @@
 // ---------- Ik415_a_CC1
 
-/*még kellhet
-		purchase:            ss_Ik415_a_CC1_purchase;
-*/
 
+spriteset(ss_Ik415_a_CC1_purchase, "gfx/4xx/Ik415_a.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik415_a_CC1, "gfx/4xx/Ik415_a.png")		{tmpl_1(0, 1, 0, 3)}
+spriteset(ss_Ik415_a_CC1_loading, "gfx/4xx/Ik415_a.png")		{tmpl_1(0, 1, 1, 3)}
 spritegroup sg_Ik415_a_CC1 {	loaded:  [ss_Ik415_a_CC1];	loading: [ss_Ik415_a_CC1_loading];}
 
 // Játékban grafika
@@ -34,14 +35,14 @@ switch(FEAT_ROADVEHS, SELF, sw_Ik415_a_CC1_names, (extra_callback_info1 >> 8) & 
 switch(FEAT_ROADVEHS, SELF, sw_Ik415_a_CC1_texts, extra_callback_info1 & 0xFF) {
 	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_415), string(STR_O1_3_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
 	0x20: sw_Ik415_a_CC1_names; // Vásárlási lista név
-	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_415), string(STR_S1_PROTO), string(STR_EMPTY)); // Elővásárlási név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_415), string(STR_EMPTY), string(STR_EMPTY)); // Elővásárlási név
 	return CB_RESULT_NO_TEXT;
 }
 
 // Item
 item(FEAT_ROADVEHS, item_Ik415_a_CC1) {
 	property {
-		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_415), string(STR_S1_PROTO), string(STR_EMPTY));
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_415), string(STR_EMPTY), string(STR_EMPTY));
 		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
 		introduction_date:   date(1984,01,01);
 		model_life:          1;

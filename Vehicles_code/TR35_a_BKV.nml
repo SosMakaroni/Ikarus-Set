@@ -1,9 +1,10 @@
 // ---------- TR35_a_BKV
 
-/*még kellhet
-		purchase:            ss_TR35_a_BKV_purchase;
-*/
 
+spriteset(ss_TR35_a_BKV_purchase, "gfx/Old/TR35_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_TR35_a_BKV, "gfx/Old/TR35_a.png")		{tmpl_1(1, 1, 0, 0)}
+spriteset(ss_TR35_a_BKV_loading, "gfx/Old/TR35_a.png")		{tmpl_1(1, 1, 1, 0)}
 spritegroup sg_TR35_a_BKV {	loaded:  [ss_TR35_a_BKV];	loading: [ss_TR35_a_BKV_loading];}
 
 // Játékban grafika

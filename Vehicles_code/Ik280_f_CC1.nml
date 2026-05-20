@@ -1,11 +1,14 @@
 // ---------- Ik280_f_CC1
 
-/*még kellhet
-		purchase:            ss_Ik280_f_CC1_a_purchase;
-*/
 
+spriteset(ss_Ik280_f_CC1_purchase, "gfx/2xx/Ik280_f.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik280_f_CC1_a, "gfx/2xx/Ik280_f.png")		{tmpl_1(0, 1, 0, 1)}
+spriteset(ss_Ik280_f_CC1_a_loading, "gfx/2xx/Ik280_f.png")		{tmpl_1(0, 1, 1, 1)}
 spritegroup sg_Ik280_f_CC1_a {	loaded:  [ss_Ik280_f_CC1_a];	loading: [ss_Ik280_f_CC1_a_loading];}
 
+spriteset(ss_Ik280_f_CC1_b, "gfx/2xx/Ik280_f.png")		{tmpl_1(0, 2, 0, 0)}
+spriteset(ss_Ik280_f_CC1_b_loading, "gfx/2xx/Ik280_f.png")		{tmpl_1(0, 2, 1, 0)}
 spritegroup sg_Ik280_f_CC1_b {	loaded:  [ss_Ik280_f_CC1_b];	loading: [ss_Ik280_f_CC1_b_loading];}
 
 // Játékban grafika
@@ -37,7 +40,7 @@ switch(FEAT_ROADVEHS, SELF, sw_Ik280_f_CC1_names, (extra_callback_info1 >> 8) & 
 }
 
 switch(FEAT_ROADVEHS, SELF, sw_Ik280_f_CC1_texts, extra_callback_info1 & 0xFF) {
-	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_O1_3_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
+	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_O1_4_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
 	0x20: sw_Ik280_f_CC1_names; // Vásárlási lista név
 	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_EMPTY), string(STR_EMPTY)); // Elővásárlási név
 	return CB_RESULT_NO_TEXT;
@@ -53,7 +56,7 @@ item(FEAT_ROADVEHS, item_Ik280_f_CC1) {
 		vehicle_life:        1;
 		reliability_decay:   1;
 		cargo_allow_refit:   [PASS,TOUR];
-		loading_speed:       30;
+		loading_speed:       40;
 		sprite_id:           SPRITE_ID_NEW_ROADVEH;
 		speed:               78 km/h;
 		misc_flags:          bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_SPRITE_STACK);
@@ -70,12 +73,12 @@ item(FEAT_ROADVEHS, item_Ik280_f_CC1) {
 	graphics {
 		default:             sw_Ik280_f_CC1;
 		    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_Ik280_f_CC1_a_purchase;
+		purchase:            ss_Ik280_f_CC1_purchase;
 		articulated_part:    sw_Ik280_f_CC1_articulated;
 		length:              sw_Ik280_f_CC1_length;
-		cost_factor:         20 * parapuco;
-		running_cost_factor: 26 * pararuco;
-		additional_text:     string(STR_GEN_DATA, 30, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_3_DOORS));
+		cost_factor:         21 * parapuco;
+		running_cost_factor: 27 * pararuco;
+		additional_text:     string(STR_GEN_DATA, 40, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_4_DOORS));
 		name:                sw_Ik280_f_CC1_texts; // Vásárlási almenü switch
 	}
 }

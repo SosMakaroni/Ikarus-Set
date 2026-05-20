@@ -1,9 +1,10 @@
 // ---------- Ik315_a_CC1
 
-/*még kellhet
-		purchase:            ss_Ik315_a_CC1_purchase;
-*/
 
+spriteset(ss_Ik315_a_CC1_purchase, "gfx/EAG/Ik315_a.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik315_a_CC1, "gfx/EAG/Ik315_a.png")		{tmpl_1(0, 1, 0, 0)}
+spriteset(ss_Ik315_a_CC1_loading, "gfx/EAG/Ik315_a.png")		{tmpl_1(0, 1, 1, 0)}
 spritegroup sg_Ik315_a_CC1 {	loaded:  [ss_Ik315_a_CC1];	loading: [ss_Ik315_a_CC1_loading];}
 
 // Játékban grafika

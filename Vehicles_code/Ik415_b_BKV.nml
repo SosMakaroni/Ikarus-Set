@@ -1,9 +1,10 @@
 // ---------- Ik415_b_BKV
 
-/*még kellhet
-		purchase:            ss_Ik415_b_BKV_purchase;
-*/
 
+spriteset(ss_Ik415_b_BKV_purchase, "gfx/4xx/Ik415_b.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik415_b_BKV, "gfx/4xx/Ik415_b.png")		{tmpl_1(1, 1, 0, 3)}
+spriteset(ss_Ik415_b_BKV_loading, "gfx/4xx/Ik415_b.png")		{tmpl_1(1, 1, 1, 3)}
 spritegroup sg_Ik415_b_BKV {	loaded:  [ss_Ik415_b_BKV];	loading: [ss_Ik415_b_BKV_loading];}
 
 // Játékban grafika

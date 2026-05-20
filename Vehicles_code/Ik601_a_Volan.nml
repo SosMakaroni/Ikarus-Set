@@ -1,9 +1,10 @@
 // ---------- Ik601_a_Volan
 
-/*még kellhet
-		purchase:            ss_Ik601_a_Volan_purchase;
-*/
 
+spriteset(ss_Ik601_a_Volan_purchase, "gfx/Old/Ik601_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik601_a_Volan, "gfx/Old/Ik601_a.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_Ik601_a_Volan_loading, "gfx/Old/Ik601_a.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_Ik601_a_Volan {	loaded:  [ss_Ik601_a_Volan];	loading: [ss_Ik601_a_Volan_loading];}
 
 // Játékban grafika

@@ -1,9 +1,10 @@
 // ---------- Ik30_a_BKV
 
-/*még kellhet
-		purchase:            ss_Ik30_a_BKV_purchase;
-*/
 
+spriteset(ss_Ik30_a_BKV_purchase, "gfx/Old/Ik30_a.png")		{tmpl_purchase(2)}
+
+spriteset(ss_Ik30_a_BKV, "gfx/Old/Ik30_a.png")		{tmpl_1(2, 1, 0, 1)}
+spriteset(ss_Ik30_a_BKV_loading, "gfx/Old/Ik30_a.png")		{tmpl_1(2, 1, 1, 1)}
 spritegroup sg_Ik30_a_BKV {	loaded:  [ss_Ik30_a_BKV];	loading: [ss_Ik30_a_BKV_loading];}
 
 // Játékban grafika

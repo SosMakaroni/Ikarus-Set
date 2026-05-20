@@ -1,11 +1,14 @@
 // ---------- Ik435_d_Koros
 
-/*még kellhet
-		purchase:            ss_Ik435_d_Koros_a_purchase;
-*/
 
+spriteset(ss_Ik435_d_Koros_purchase, "gfx/4xx/Ik435_d.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik435_d_Koros_a, "gfx/4xx/Ik435_d.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_Ik435_d_Koros_a_loading, "gfx/4xx/Ik435_d.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_Ik435_d_Koros_a {	loaded:  [ss_Ik435_d_Koros_a];	loading: [ss_Ik435_d_Koros_a_loading];}
 
+spriteset(ss_Ik435_d_Koros_b, "gfx/4xx/Ik435_d.png")		{tmpl_1(1, 2, 0, 0)}
+spriteset(ss_Ik435_d_Koros_b_loading, "gfx/4xx/Ik435_d.png")		{tmpl_1(1, 2, 1, 0)}
 spritegroup sg_Ik435_d_Koros_b {	loaded:  [ss_Ik435_d_Koros_b];	loading: [ss_Ik435_d_Koros_b_loading];}
 
 // Játékban grafika
@@ -70,7 +73,7 @@ item(FEAT_ROADVEHS, item_Ik435_d_Koros) {
 	graphics {
 		default:             sw_Ik435_d_Koros;
 		colour_mapping:	PALETTE_IDENTITY;    // Cégszín deaktiválás, ha valós színű jármű
-		purchase:            ss_Ik435_d_Koros_a_purchase;
+		purchase:            ss_Ik435_d_Koros_purchase;
 		articulated_part:    sw_Ik435_d_Koros_articulated;
 		length:              sw_Ik435_d_Koros_length;
 		cost_factor:         24 * parapuco;

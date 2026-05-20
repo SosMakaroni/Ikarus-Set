@@ -1,9 +1,10 @@
 // ---------- IkE95_a_Volan2
 
-/*még kellhet
-		purchase:            ss_IkE95_a_Volan2_purchase;
-*/
 
+spriteset(ss_IkE95_a_Volan2_purchase, "gfx/EAG/IkE95_a.png")		{tmpl_purchase(3)}
+
+spriteset(ss_IkE95_a_Volan2, "gfx/EAG/IkE95_a.png")		{tmpl_1(3, 1, 0, 3)}
+spriteset(ss_IkE95_a_Volan2_loading, "gfx/EAG/IkE95_a.png")		{tmpl_1(3, 1, 1, 3)}
 spritegroup sg_IkE95_a_Volan2 {	loaded:  [ss_IkE95_a_Volan2];	loading: [ss_IkE95_a_Volan2_loading];}
 
 // Játékban grafika

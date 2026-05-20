@@ -2,8 +2,8 @@
 # This is the English language file
 
 # GRF name and description definitions	
-STR_GRF_NAME					:Ikarus Set 7
-STR_GRF_DESC					:{}{LTBLUE}Ikarus Set{BLACK}{}{}If you want to play with badges, it’s recommended to also add the {GOLD}PeterN's Default Badge Set{BLACK} GRF for the best gameplay experience.{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.28 2026.05.03.
+STR_GRF_NAME					:Ikarus Set Classic
+STR_GRF_DESC					:{}{LTBLUE}Ikarus Set Classic{BLACK}{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.51 2026.05.21.
 
 STR_BUG							:HVW Toyland bug, sorry :(
 STR_EMPTY 						:
@@ -336,6 +336,7 @@ STR_T1_211                     :211
 STR_T1_212                     :212
 STR_T1_222                     :222
 STR_T1_250                     :250
+STR_T1_253                     :253
 STR_T1_254                     :254
 STR_T1_255                     :255
 STR_T1_256                     :256
@@ -399,7 +400,21 @@ STR_O1_4_DOORS                 :4 doors
 STR_O1_5_DOORS                 :5 doors
 
 # --- Other2 ---
+STR_O2_250_59                  :250.59
+STR_O2_256_44                  :256.44
+STR_O2_260_00                  :260.00
+STR_O2_260_31                  :260.31
+STR_O2_260_32                  :260.32
+STR_O2_260_46                  :260.46
+STR_O2_263_01                  :263.01
+STR_O2_263_04                  :263.04
+STR_O2_263_06                  :263.06
+STR_O2_263_10                  :263.10
+STR_O2_280_00                  :280.00
+STR_O2_280_37                  :280.37
 STR_O2_8_4M                    :8,4m
+STR_O2_E92_20                  :E92.20
+STR_O2_PROTO                   :Proto
 
 # --- Liveries ---
 STR_LIV_BKV                    :BKV

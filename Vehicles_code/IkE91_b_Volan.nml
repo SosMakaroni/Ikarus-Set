@@ -1,9 +1,10 @@
 // ---------- IkE91_b_Volan
 
-/*még kellhet
-		purchase:            ss_IkE91_b_Volan_purchase;
-*/
 
+spriteset(ss_IkE91_b_Volan_purchase, "gfx/EAG/IkE91_b.png")		{tmpl_purchase(1)}
+
+spriteset(ss_IkE91_b_Volan, "gfx/EAG/IkE91_b.png")		{tmpl_1(1, 1, 0, 0)}
+spriteset(ss_IkE91_b_Volan_loading, "gfx/EAG/IkE91_b.png")		{tmpl_1(1, 1, 1, 0)}
 spritegroup sg_IkE91_b_Volan {	loaded:  [ss_IkE91_b_Volan];	loading: [ss_IkE91_b_Volan_loading];}
 
 // Játékban grafika

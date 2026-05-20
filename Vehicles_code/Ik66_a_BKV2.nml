@@ -1,9 +1,10 @@
 // ---------- Ik66_a_BKV2
 
-/*még kellhet
-		purchase:            ss_Ik66_a_BKV2_purchase;
-*/
 
+spriteset(ss_Ik66_a_BKV2_purchase, "gfx/Old/Ik66_a.png")		{tmpl_purchase(3)}
+
+spriteset(ss_Ik66_a_BKV2, "gfx/Old/Ik66_a.png")		{tmpl_1(3, 1, 0, 6)}
+spriteset(ss_Ik66_a_BKV2_loading, "gfx/Old/Ik66_a.png")		{tmpl_1(3, 1, 1, 6)}
 spritegroup sg_Ik66_a_BKV2 {	loaded:  [ss_Ik66_a_BKV2];	loading: [ss_Ik66_a_BKV2_loading];}
 
 // Játékban grafika

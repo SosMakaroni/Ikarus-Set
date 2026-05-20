@@ -1,9 +1,10 @@
 // ---------- Ik602_a_Tourist
 
-/*még kellhet
-		purchase:            ss_Ik602_a_Tourist_purchase;
-*/
 
+spriteset(ss_Ik602_a_Tourist_purchase, "gfx/Old/Ik602_a.png")		{tmpl_purchase(1)}
+
+spriteset(ss_Ik602_a_Tourist, "gfx/Old/Ik602_a.png")		{tmpl_1(1, 1, 0, 2)}
+spriteset(ss_Ik602_a_Tourist_loading, "gfx/Old/Ik602_a.png")		{tmpl_1(1, 1, 1, 2)}
 spritegroup sg_Ik602_a_Tourist {	loaded:  [ss_Ik602_a_Tourist];	loading: [ss_Ik602_a_Tourist_loading];}
 
 // Játékban grafika

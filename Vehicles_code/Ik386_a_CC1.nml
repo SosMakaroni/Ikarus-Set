@@ -1,9 +1,10 @@
 // ---------- Ik386_a_CC1
 
-/*még kellhet
-		purchase:            ss_Ik386_a_CC1_purchase;
-*/
 
+spriteset(ss_Ik386_a_CC1_purchase, "gfx/EAG/Ik386_a.png")		{tmpl_purchase(0)}
+
+spriteset(ss_Ik386_a_CC1, "gfx/EAG/Ik386_a.png")		{tmpl_1(0, 1, 0, 3)}
+spriteset(ss_Ik386_a_CC1_loading, "gfx/EAG/Ik386_a.png")		{tmpl_1(0, 1, 1, 3)}
 spritegroup sg_Ik386_a_CC1 {	loaded:  [ss_Ik386_a_CC1];	loading: [ss_Ik386_a_CC1_loading];}
 
 // Játékban grafika
