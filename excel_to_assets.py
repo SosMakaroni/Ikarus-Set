@@ -154,6 +154,29 @@ def generate_nml(row, cm, maps):
     }
     BadgeUsage = badge_usage.get(Usage, '')
 
+    CLratio = float(Capacity) / float(LoadingSpeed)       # rakodási sebesség kiírásáshoz az egyenlet
+    if CLratio > 7:
+        Lspeedstring = ["STR_LOSPE_VSLOW"]
+    elif CLratio > 6:
+        Lspeedstring = ["STR_LOSPE_SLOW"]
+    elif CLratio > 5:
+        Lspeedstring = ["STR_LOSPE_MEDIUM"]
+    elif CLratio > 4:
+        Lspeedstring = ["STR_LOSPE_FAST"]
+    else:
+        Lspeedstring = ["STR_LOSPE_VFAST"]    
+
+    if float(Comfort) > 200:                       # kényelem kiírásáshoz az egyenlet
+        Comfstring = ["STR_COMFORT_5"]
+    elif float(Comfort) > 185:
+        Comfstring = ["STR_COMFORT_4"]
+    elif float(Comfort) > 150:
+        Comfstring = ["STR_COMFORT_3"]
+    elif float(Comfort) > 100:
+        Comfstring = ["STR_COMFORT_2"]
+    else:
+        Comfstring = ["STR_COMFORT_1"]
+
     # --- GRAFIKA ÉS CSUKLÓ LOGIKA (EREDETI MÁSOLATA) ---
     cs_graph2, cs_graph3, cs_graph4, cs_graph5, cs_graph6 = [], [], [], [], []
 
@@ -398,7 +421,7 @@ def generate_nml(row, cm, maps):
     lines.append(f"\t\tlength:              sw_{ItemID}_{Color}_length;")
     lines.append(f"\t\tcost_factor:         {PurchasePrice} * parapuco;")
     lines.append(f"\t\trunning_cost_factor: {Maintenance} * pararuco;")
-    lines.append(f"\t\tadditional_text:     string(STR_GEN_DATA, {LoadingSpeed or 0}, string({s2_id}), string({o2_id}), string({o1_id}));")
+    lines.append(f"\t\tadditional_text:     string(STR_GEN_DATA, string({Lspeedstring[0]}), {LoadingSpeed or 0}, string({Comfstring[0]}), {Comfort or 0}, string({o2_id}), string({o1_id}));")            # Lspeedstring Comfstring
     lines.append(f"\t\tname:                sw_{ItemID}_{Color}_texts; // Vásárlási almenü switch")
     lines.append("\t}")
     lines.append("}")
@@ -412,7 +435,7 @@ def generate_lng(rows, cm, maps):
     m_map, t_map, s1_map, s2_map, o1_map, o2_map, l_map = maps
     lines = [""]
     # A közös sablonok (színekkel és formázással az eredeti kérésed szerint)
-    lines.append("STR_GEN_DATA :Loading speed: {GOLD}{COMMA}{BLACK}{}{GOLD}----------{}{BLACK}Type: {GOLD}{STRING}, {STRING}, {STRING}{BLACK}")
+    lines.append("STR_GEN_DATA :Loading speed: {STRING} {GOLD}({COMMA}){BLACK}{}Cargo againg speed: {STRING} {GOLD}({COMMA}){BLACK}{}Type: {GOLD}{STRING} {STRING}{BLACK}")
     lines.append("STR_GEN_NAME :{STRING} {STRING} {STRING} {STRING}")
     lines.append("STR_GEN_LIVERY :{STRING} livery")
     lines.append("STR_GEN_INFO :{STRING} {LTBLUE}- {STRING}{BLACK}")

@@ -45,8 +45,8 @@ item(FEAT_ROADVEHS, item_Ik30_a_BKV) {
 		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_30), string(STR_EMPTY), string(STR_EMPTY));
 		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
 		introduction_date:   date(1951,01,01);
-		model_life:          20;
-		vehicle_life:        25;
+		model_life:          30;
+		vehicle_life:        40;
 		reliability_decay:   20;
 		cargo_allow_refit:   [PASS,TOUR];
 		loading_speed:       10;
@@ -71,7 +71,7 @@ item(FEAT_ROADVEHS, item_Ik30_a_BKV) {
 		length:              sw_Ik30_a_BKV_length;
 		cost_factor:         7 * parapuco;
 		running_cost_factor: 10 * pararuco;
-		additional_text:     string(STR_GEN_DATA, 10, string(STR_EMPTY), string(STR_O2_8_4M), string(STR_O1_2_DOORS));
+		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_VFAST), 10, string(STR_COMFORT_4), 200, string(STR_EMPTY), string(STR_O1_2_DOORS));
 		name:                sw_Ik30_a_BKV_texts; // Vásárlási almenü switch
 	}
 }

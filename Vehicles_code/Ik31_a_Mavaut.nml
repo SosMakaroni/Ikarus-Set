@@ -42,9 +42,9 @@ item(FEAT_ROADVEHS, item_Ik31_a_Mavaut) {
 		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_31), string(STR_EMPTY), string(STR_EMPTY));
 		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
 		introduction_date:   date(1959,01,01);
-		model_life:          1;
-		vehicle_life:        1;
-		reliability_decay:   1;
+		model_life:          30;
+		vehicle_life:        40;
+		reliability_decay:   20;
 		cargo_allow_refit:   [PASS,TOUR];
 		loading_speed:       5;
 		sprite_id:           SPRITE_ID_NEW_ROADVEH;
@@ -68,7 +68,7 @@ item(FEAT_ROADVEHS, item_Ik31_a_Mavaut) {
 		length:              sw_Ik31_a_Mavaut_length;
 		cost_factor:         7 * parapuco;
 		running_cost_factor: 10 * pararuco;
-		additional_text:     string(STR_GEN_DATA, 5, string(STR_EMPTY), string(STR_EMPTY), string(STR_O1_1_DOOR));
+		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_SLOW), 5, string(STR_COMFORT_2), 150, string(STR_EMPTY), string(STR_O1_1_DOOR));
 		name:                sw_Ik31_a_Mavaut_texts; // Vásárlási almenü switch
 	}
 }

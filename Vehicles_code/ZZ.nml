@@ -64,6 +64,7 @@ sort(FEAT_ROADVEHS, [
 	item_Ik256_b_CC1,
 	item_Ik256_b_CC2,
 	item_Ik256_c_CC1,
+	item_Ik256_d_CC1,
 	item_Ik260_a_CC1,
 	item_Ik260_a_CC2,
 	item_Ik260_a_BKV,
@@ -96,6 +97,7 @@ sort(FEAT_ROADVEHS, [
 	item_Ik284_a_BKV2,
 	item_Ik283_b_CC1,
 	item_Ik315_a_CC1,
+	item_Ik325_a_CC1,
 	item_Ik350_a_CC1,
 	item_Ik386_a_CC1,
 	item_Ik397_a_CC1,
@@ -158,5 +160,12 @@ sort(FEAT_ROADVEHS, [
 	item_IkE98_a_Eurolines,
 	item_IkE99_a_CC1,
 	item_IkE99_a_Eurolines,
-	item_Ik955_a_CC1
-	]);
+	item_Ik955_a_CC1,
+	item_IkC56_a_CC1,
+	item_IkC56_a_Volan,
+	item_IkC56_b_CC1,
+	item_IkC60_a_CC1,
+	item_IkC80_a_CC1,
+	item_IkC80_b_CC1,
+	item_IkC83_b_CC1
+]);
