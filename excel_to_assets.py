@@ -89,6 +89,7 @@ def generate_nml(row, cm, maps):
     Usage         = safe_val(row, cm['Usage'])
     Flag          = safe_val(row, cm['Flag'])
     ColorSor      = safe_val(row, cm['ColorSor'])
+    LiveryText    = safe_val(row, cm['LiveryText'])
 
     # String ID-k kikeresése az optimalizált térképből
     m_id  = m_map.get(safe_val(row, cm['TextManufacturer']), "STR_EMPTY")
@@ -143,7 +144,6 @@ def generate_nml(row, cm, maps):
         'Switzerland':  ', "flag/CH"',
         'USA':          ', "flag/US"',
     }
-    BadgeFlag = badge_flag.get(Flag, '')
 
     badge_usage = {
         'City':      ', "usage/city"',
@@ -153,6 +153,112 @@ def generate_nml(row, cm, maps):
         'Tourist':   ', "usage/tourist"',
     }
     BadgeUsage = badge_usage.get(Usage, '')
+
+    badge_livery = {
+        'Full1':         ', "livery/full1"',
+        'Full2':         ', "livery/full2"',
+        'Standard1':     ', "livery/standard1"',
+        'Standard2':     ', "livery/standard2"',
+        'Stripe1':       ', "livery/stripe1"',
+        'Stripe2':       ', "livery/stripe2"',
+        'Baseline1':    ', "livery/baseline1"',
+        'Baseline2':    ', "livery/baseline2"',
+        'Dualbaseline1':    ', "livery/dualbaseline1"',
+        'Dualbaseline2':    ', "livery/dualbaseline2"',
+        'Endcaps1': ', "livery/endcaps1"',
+        'Endcaps2': ', "livery/endcaps2"',
+        'Fullbaseline1':    ', "livery/fullbaseline1"',
+        'Fullbaseline2':    ', "livery/fullbaseline2"',
+        'Fullhalfhalf1':    ', "livery/fullhalfhalf1"',
+        'Fullhalfhalf2':    ', "livery/fullhalfhalf2"',
+        'Upper1':     ', "livery/upper1"',
+        'Upper2':     ', "livery/upper2"',
+        'Halfhalf1':    ', "livery/halfhalf1"',
+        'Halfhalf2':    ', "livery/halfhalf2"',
+        'Fullsilverarrow1': ', "livery/fullsilverarrow1"',
+        'Fullsilverarrow2': ', "livery/fullsilverarrow2"',
+        'Silverarrow1': ', "livery/silverarrow1"',
+        'Silverarrow2': ', "livery/silverarrow2"',
+        'Whitestripe1': ', "livery/whitestripe1"',
+        'Whitestripe2': ', "livery/whitestripe2"',
+        'Striped1':    ', "livery/striped1"',
+        'Striped2':    ', "livery/striped2"',
+        'Alba1':    ', "livery/alba1"',
+        'Alba2':    ', "livery/alba2"',
+        'Pannon1':    ', "livery/pannon1"',
+        'Pannon2':    ', "livery/pannon2"',
+        'Gyors1':    ', "livery/gyors1"',
+        'Gyors2':    ', "livery/gyors2"',
+        'Silverfront1':    ', "livery/silverfront1"',
+        'Silverfront2':    ', "livery/silverfront2"',
+        'Hungary':      ', "livery/hungarian"',
+        'CC1':          ', "livery/cc1"',
+        'CC2':          ', "livery/cc2"',
+        'Eurolines':    ', "livery/hungarian"',
+        'Koros':        ', "livery/hungarian"',
+        'Mavaut':       ', "livery/hungarian"',
+        'Tourist':      ', "livery/hungarian"',
+        'Volan':        ', "livery/hungarian"',
+        'Zala':         ', "livery/hungarian"',
+        'BKV':          ', "livery/hungarian"',
+    }
+    BadgeLivery = badge_livery.get(LiveryText, '')
+
+    text_livery = {
+        'Full1':         'STR_LIV_Full',
+        'Full2':         'STR_LIV_Full',
+        'Standard1':     'STR_LIV_Standard',
+        'Standard2':     'STR_LIV_Standard',
+        'Stripe1':       'STR_LIV_Stripe',
+        'Stripe2':       'STR_LIV_Stripe',
+        'Baseline1':     'STR_LIV_Baseline',
+        'Baseline2':     'STR_LIV_Baseline',
+        'Dualbaseline1': 'STR_LIV_Dualbaseline',
+        'Dualbaseline2': 'STR_LIV_Dualbaseline',
+        'Endcaps1':      'STR_LIV_Endcaps',
+        'Endcaps2':      'STR_LIV_Endcaps',
+        'Fullbaseline1': 'STR_LIV_Fullbaseline',
+        'Fullbaseline2': 'STR_LIV_Fullbaseline',
+        'Fullhalfhalf1':     'STR_LIV_Halfhalf',
+        'Fullhalfhalf2':     'STR_LIV_Halfhalf',
+        'Upper1':     'STR_LIV_Upper',
+        'Upper2':     'STR_LIV_Upper',
+        'Halfhalf1':     'STR_LIV_Halfhalf',
+        'Halfhalf2':     'STR_LIV_Halfhalf',
+        'Fullsilverarrow1':     'STR_LIV_Silverarrow',
+        'Fullsilverarrow2':     'STR_LIV_Silverarrow',
+        'Silverarrow1':     'STR_LIV_Silverarrow',
+        'Silverarrow2':     'STR_LIV_Silverarrow',
+        'Whitestripe1':     'STR_LIV_Whitestripe',
+        'Whitestripe2':     'STR_LIV_Whitestripe',
+        'Striped1':     'STR_LIV_Striped',
+        'Striped2':     'STR_LIV_Striped',
+        'Alba1':     'STR_LIV_Alba',
+        'Alba2':     'STR_LIV_Alba',
+        'Pannon1':     'STR_LIV_Pannon',
+        'Pannon2':     'STR_LIV_Pannon',
+        'Gyors1':     'STR_LIV_Gyors',
+        'Gyors2':     'STR_LIV_Gyors',
+        'Silverfront1':     'STR_LIV_Silverfront',
+        'Silverfront2':     'STR_LIV_Silverfront',
+        'Hungary':      'STR_LIV_HUNGARIAN',
+        'CC1':          'STR_LIV_CC',
+        'CC2':          'STR_LIV_CC',
+        'CC3':          'STR_LIV_CC',
+        'CC4':          'STR_LIV_CC',
+        'CC5':          'STR_LIV_CC',
+        'CC6':          'STR_LIV_CC',
+        'CC7':          'STR_LIV_CC',
+        'CC8':          'STR_LIV_CC',
+        'Eurolines':    'STR_LIV_EUROLINES',
+        'Koros':        'STR_LIV_KOROS',
+        'Mavaut':       'STR_LIV_MAVAUT',
+        'Tourist':      'STR_LIV_TOURIST',
+        'Volan':        'STR_LIV_VOLAN',
+        'Zala':         'STR_LIV_ZALA',
+        'BKV':          'STR_LIV_BKV',
+    }
+    TextLivery = text_livery.get(LiveryText, '')
 
     CLratio = float(Capacity) / float(LoadingSpeed)       # rakodási sebesség kiírásáshoz az egyenlet
     if CLratio > 7:
@@ -179,6 +285,7 @@ def generate_nml(row, cm, maps):
 
     # --- GRAFIKA ÉS CSUKLÓ LOGIKA (EREDETI MÁSOLATA) ---
     cs_graph2, cs_graph3, cs_graph4, cs_graph5, cs_graph6 = [], [], [], [], []
+    cs_igraph2, cs_igraph3, cs_igraph4, cs_igraph5, cs_igraph6 = [], [], [], [], []
 
     toldas_a, toldas_b, toldas_c = 0, 0, 0
     if float(Hossz2 or 0) > 0: toldas_a = Hossz1
@@ -187,8 +294,6 @@ def generate_nml(row, cm, maps):
 
     if float(Hossz6 or 0) > 0: toldas_c = Hossz5
 
-    psprs1 = [f"spriteset(ss_{ItemID}_{Color}_purchase, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_purchase({ColorSor})}}"] # Vásárlási nézet spriteset
-    psw1 = [f"\t\tpurchase:            ss_{ItemID}_{Color}_purchase;"] # Graphic-ban a vásárlási nézet sor
     sprs1 = [
         f"spriteset(ss_{ItemID}_{Color}, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 0, {toldas_a})}}",
         f"spriteset(ss_{ItemID}_{Color}_loading, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_1({ColorSor}, 1, 1, {toldas_a})}}"
@@ -222,42 +327,55 @@ def generate_nml(row, cm, maps):
     if float(Hossz2 or 0) > 0:
         cs_graph1 = ["\tss_toldat;"] # grafika switch
         cs_graph2 = [f"\t1: sg_{ItemID}_{Color};"] # grafika switch
+        cs_igraph2 = [f"\t1: ss_toldat;"] # depo grafika switch
         if float(Hossz3 or 0) > 0:
             cs_graph2 = [f"\t1: sg_{ItemID}_{Color}_a;"] # grafika switch
             cs_graph3 = [f"\t2: sg_{ItemID}_{Color}_b;"] # grafika switch
+            cs_igraph3 = [f"\t2: ss_toldat;"] # depo grafika switch
             if float(Hossz4 or 0) > 0:
                 cs_graph3 = ["\t2: ss_toldat;"] # grafika switch
                 cs_graph4 = [f"\t3: sg_{ItemID}_{Color}_b;"] # grafika switch
+                cs_igraph4 = [f"\t3: ss_toldat;"] # depo grafika switch
                 if float(Hossz5 or 0) > 0:
                     cs_graph5 = [f"\t4: sg_{ItemID}_{Color}_c;"] # grafika switch
+                    cs_igraph5 = [f"\t4: ss_toldat;"] # depo grafika switch
                     if float(Hossz6 or 0) > 0:
                         cs_graph5 = ["\t4: ss_toldat;"] # grafika switch
                         cs_graph6 = [f"\t5: sg_{ItemID}_{Color}_c;"] # grafika switch
+                        cs_igraph6 = [f"\t5: ss_toldat;"] # depo grafika switch
             else:
                 if float(Hossz5 or 0) > 0:
                     cs_graph4 = [f"\t3: sg_{ItemID}_{Color}_c;"] # grafika switch
+                    cs_igraph4 = [f"\t3: ss_toldat;"] # depo grafika switch
                     if float(Hossz6 or 0) > 0:
                         cs_graph4 = ["\t3: ss_toldat;"] # grafika switch
                         cs_graph5 = [f"\t4: sg_{ItemID}_{Color}_c;"] # grafika switch
+                        cs_igraph5 = [f"\t4: ss_toldat;"] # depo grafika switch
             
     else:
         if float(Hossz3 or 0) > 0:
             cs_graph1 = [f"\tsg_{ItemID}_{Color}_a;"] # grafika switch
             cs_graph2 = [f"\t1: sg_{ItemID}_{Color}_b;"] # grafika switch
+            cs_igraph2 = [f"\t1: ss_toldat;"] # depo grafika switch
             if float(Hossz4 or 0) > 0:
                 cs_graph2 = ["\t1: ss_toldat;"] # grafika switch
                 cs_graph3 = [f"\t2: sg_{ItemID}_{Color}_b;"] # grafika switch
+                cs_igraph3 = [f"\t2: ss_toldat;"] # depo grafika switch
                 if float(Hossz5 or 0) > 0:
                     cs_graph4 = [f"\t3: sg_{ItemID}_{Color}_c;"] # grafika switch
+                    cs_igraph4 = [f"\t3: ss_toldat;"] # depo grafika switch
                     if float(Hossz6 or 0) > 0:
                         cs_graph4 = ["\t3: ss_toldat;"] # grafika switch
                         cs_graph5 = [f"\t4: sg_{ItemID}_{Color}_c;"] # grafika switch
+                        cs_igraph5 = [f"\t4: ss_toldat;"] # depo grafika switch
             else:
                 if float(Hossz5 or 0) > 0:
                     cs_graph3 = [f"\t2: sg_{ItemID}_{Color}_c;"] # grafika switch
+                    cs_igraph3 = [f"\t2: ss_toldat;"] # depo grafika switch
                     if float(Hossz6 or 0) > 0:
                         cs_graph3 = ["\t2: ss_toldat;"] # grafika switch
                         cs_graph4 = [f"\t3: sg_{ItemID}_{Color}_c;"] # grafika switch
+                        cs_igraph4 = [f"\t3: ss_toldat;"] # depo grafika switch
                 
 
     csuk1 = []
@@ -337,7 +455,8 @@ def generate_nml(row, cm, maps):
     # --- NML ÖSSZEÁLLÍTÁSA ---
     lines = [f"// ---------- {ItemID}_{Color}", ""]
     lines.append("")
-    lines.extend(psprs1)
+    lines.append(f"spriteset(ss_{ItemID}_{Color}_purchase, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_purchase({ColorSor})}}") # Vásárlási nézet spriteset
+    lines.append(f"spriteset(ss_{ItemID}_{Color}_depo, \"gfx/{PFolder}/{ItemID}.png\")\t\t{{tmpl_depo({ColorSor})}}") # Depo nézet spriteset
     lines.append("")
     lines.extend(sprs1)
     lines.extend(sprg1)
@@ -350,14 +469,32 @@ def generate_nml(row, cm, maps):
         lines.extend(sprs3)
         lines.extend(sprg3)
     lines.append("")
+    lines.append("// Infóban, depóban grafika")    
+    lines.append(f"switch (FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}_depographic, position_in_consist ) {{")
+    lines.extend(cs_igraph2)
+    lines.extend(cs_igraph3)
+    lines.extend(cs_igraph4)
+    lines.extend(cs_igraph5)
+    lines.extend(cs_igraph6)
+    lines.append(f"\tss_{ItemID}_{Color}_depo;")
+    lines.append("}")
+    lines.append("")
     lines.append("// Játékban grafika")    
-    lines.append(f"switch (FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}, position_in_consist ) {{")
+    lines.append(f"switch (FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}_gamegraphic, position_in_consist ) {{")
     lines.extend(cs_graph2)
     lines.extend(cs_graph3)
     lines.extend(cs_graph4)
     lines.extend(cs_graph5)
     lines.extend(cs_graph6)
     lines.extend(cs_graph1)
+    lines.append("}")
+    lines.append("")
+    lines.append("// Grafika switch")    
+    lines.append(f"switch (FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}, (extra_callback_info1 & 0x12) ) {{")
+    lines.append(f"\t0x10: sw_{ItemID}_{Color}_depographic; // Depot GUI")
+    lines.append(f"\t0x11: sw_{ItemID}_{Color}_depographic; // Vehicle Details/Refit GUI")
+    lines.append(f"\t0x12: sw_{ItemID}_{Color}_depographic; // Vehicle List")
+    lines.append(f"\t0x00: sw_{ItemID}_{Color}_gamegraphic; // Vehicle in game")
     lines.append("}")
     lines.append("")
     lines.append("// Csuklosítás")
@@ -377,7 +514,7 @@ def generate_nml(row, cm, maps):
     # --- ÚJ: OPTIMALIZÁLÓ SZÖVEG SWITCH ---
     lines.append("// Szövegek")
     lines.append(f"switch(FEAT_ROADVEHS, SELF, sw_{ItemID}_{Color}_names, (extra_callback_info1 >> 8) & 0xFFFF) {{")
-    lines.append(f"\t1: return string(STR_GEN_LIVERY, string({l_id})); // Almenü 1 név")
+    lines.append(f"\t1: return string(STR_GEN_LIVERY, string({TextLivery})); // Almenü 1 név")
     lines.append(f"\treturn CB_RESULT_NO_TEXT;")
     lines.append("}")
     lines.append("")
@@ -410,13 +547,13 @@ def generate_nml(row, cm, maps):
     lines.append(f"\t\tcargo_capacity:      {Capacity};")
     lines.append(f"\t\tcargo_age_period:    {Comfort};")
     lines.append("\t\tsound_effect:        SOUND_DEPARTURE_MODERN_BUS;")
-    lines.append(f"\t\tbadges:              [\"type/bus\"{BadgeFuel}{BadgeFlag}{BadgeUsage}];")
+    lines.append(f"\t\tbadges:              [\"type/bus\"{BadgeLivery}{BadgeFuel}{BadgeUsage}];")
     lines.append(f"\t\t{Alapszin}variant_group:             item_{ItemID}_CC1;")
     lines.append("\t}")
     lines.append("\tgraphics {")
     lines.append(f"\t\tdefault:             sw_{ItemID}_{Color};")
     lines.append(f"\t\t{Recolor}    // Cégszín deaktiválás, ha valós színű jármű")
-    lines.extend(psw1)
+    lines.append(f"\t\tpurchase:            ss_{ItemID}_{Color}_purchase;") # Vásárlási nézet sor
     lines.append(f"\t\tarticulated_part:    sw_{ItemID}_{Color}_articulated;")
     lines.append(f"\t\tlength:              sw_{ItemID}_{Color}_length;")
     lines.append(f"\t\tcost_factor:         {PurchasePrice} * parapuco;")

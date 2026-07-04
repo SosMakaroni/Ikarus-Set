@@ -2,15 +2,30 @@
 
 
 spriteset(ss_Ik263_b_CC3_purchase, "gfx/2xx/Ik263_b.png")		{tmpl_purchase(2)}
+spriteset(ss_Ik263_b_CC3_depo, "gfx/2xx/Ik263_b.png")		{tmpl_depo(2)}
 
-spriteset(ss_Ik263_b_CC3, "gfx/2xx/Ik263_b.png")		{tmpl_1(2, 1, 0, 2)}
-spriteset(ss_Ik263_b_CC3_loading, "gfx/2xx/Ik263_b.png")		{tmpl_1(2, 1, 1, 2)}
+spriteset(ss_Ik263_b_CC3, "gfx/2xx/Ik263_b.png")		{tmpl_1(2, 1, 0, 3)}
+spriteset(ss_Ik263_b_CC3_loading, "gfx/2xx/Ik263_b.png")		{tmpl_1(2, 1, 1, 3)}
 spritegroup sg_Ik263_b_CC3 {	loaded:  [ss_Ik263_b_CC3];	loading: [ss_Ik263_b_CC3_loading];}
 
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3_depographic, position_in_consist ) {
+	1: ss_toldat;
+	ss_Ik263_b_CC3_depo;
+}
+
 // Játékban grafika
-switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3, position_in_consist ) {
+switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3_gamegraphic, position_in_consist ) {
 	1: sg_Ik263_b_CC3;
 	ss_toldat;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik263_b_CC3_depographic; // Depot GUI
+	0x11: sw_Ik263_b_CC3_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik263_b_CC3_depographic; // Vehicle List
+	0x00: sw_Ik263_b_CC3_gamegraphic; // Vehicle in game
 }
 
 // Csuklosítás
@@ -23,12 +38,12 @@ switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3_articulated, extra_callback_info1) {
 // Modelhossz
 switch (FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3_length, position_in_consist) {
 	1: return 8;
-    return 2;
+    return 3;
 }
 
 // Szövegek
 switch(FEAT_ROADVEHS, SELF, sw_Ik263_b_CC3_names, (extra_callback_info1 >> 8) & 0xFFFF) {
-	1: return string(STR_GEN_LIVERY, string(STR_LIV_CC3)); // Almenü 1 név
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_Baseline)); // Almenü 1 név
 	return CB_RESULT_NO_TEXT;
 }
 
@@ -60,7 +75,7 @@ item(FEAT_ROADVEHS, item_Ik263_b_CC3) {
 		cargo_capacity:      120;
 		cargo_age_period:    200;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "power/diesel", "flag/flag_CC", "usage/city"];
+		badges:              ["type/bus", "livery/baseline1", "power/diesel", "usage/city"];
 		variant_group:             item_Ik263_b_CC1;
 	}
 	graphics {

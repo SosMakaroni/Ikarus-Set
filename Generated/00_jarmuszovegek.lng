@@ -6,6 +6,7 @@ STR_GEN_INFO :{STRING} {LTBLUE}- {STRING}{BLACK}
 
 # --- Manufacturers ---
 STR_MFR_IKARUS                 :Ikarus
+STR_MFR_MAVAG                  :Mávag
 
 # --- Type ---
 STR_T1_180                     :180
@@ -67,7 +68,11 @@ STR_T1_E98                     :E98
 STR_T1_E99                     :E99
 STR_T1_ITC600                  :ITC600
 STR_T1_ITC601                  :ITC601
-STR_T1_TR35                    :TR35
+STR_T1_M5                      :M5
+STR_T1_N26                     :N26
+STR_T1_N2H                     :N2h
+STR_T1_NI56                    :NI56
+STR_T1_TR3_5                   :TR3,5
 STR_T1_TR5                     :TR5
 
 # --- Sub1 ---
@@ -89,13 +94,20 @@ STR_O2_256_44                  :256.44
 STR_O2_260_00                  :260.00
 STR_O2_260_31                  :260.31
 STR_O2_260_32                  :260.32
+STR_O2_260_43                  :260.43
 STR_O2_260_46                  :260.46
+STR_O2_260_46_LOW_REAR_DOOR    :260.46 Low rear door
 STR_O2_263_01                  :263.01
 STR_O2_263_04                  :263.04
 STR_O2_263_06                  :263.06
 STR_O2_263_10                  :263.10
 STR_O2_280_00                  :280.00
+STR_O2_280_03                  :280.03
 STR_O2_280_37                  :280.37
+STR_O2_280_40A                 :280.40A
+STR_O2_280_52                  :280.52
+STR_O2_280_52G                 :280.52G
+STR_O2_280_54                  :280.54
 STR_O2_C56_22                  :C56.22
 STR_O2_C56_42                  :C56.42
 STR_O2_C60_30A                 :C60.30A
@@ -105,15 +117,40 @@ STR_O2_C83_30                  :C83.30
 STR_O2_C83_40                  :C83.40
 STR_O2_E92_20                  :E92.20
 STR_O2_PROTO                   :Proto
+STR_O2_WOOD_FRAME              :Wood frame
 
 # --- Liveries ---
+STR_LIV_ALBA2                  :Alba2
 STR_LIV_BKV                    :BKV
-STR_LIV_CC1                    :CC1
-STR_LIV_CC2                    :CC2
-STR_LIV_CC3                    :CC3
+STR_LIV_BASELINE1              :Baseline1
+STR_LIV_BASELINE2              :Baseline2
+STR_LIV_DUALBASELINE1          :Dualbaseline1
+STR_LIV_DUALBASELINE2          :Dualbaseline2
+STR_LIV_ENDCAPS1               :Endcaps1
+STR_LIV_ENDCAPS2               :Endcaps2
 STR_LIV_EUROLINES              :Eurolines
+STR_LIV_FULL1                  :Full1
+STR_LIV_FULL2                  :Full2
+STR_LIV_FULLBASELINE1          :Fullbaseline1
+STR_LIV_FULLBASELINE2          :Fullbaseline2
+STR_LIV_FULLHALFHALF1          :Fullhalfhalf1
+STR_LIV_FULLHALFHALF2          :Fullhalfhalf2
+STR_LIV_FULLSILVERARROW1       :Fullsilverarrow1
+STR_LIV_FULLSILVERARROW2       :Fullsilverarrow2
+STR_LIV_GYORS1                 :Gyors1
+STR_LIV_HALFHALF2              :Halfhalf2
 STR_LIV_KOROS                  :Koros
 STR_LIV_MAVAUT                 :Mavaut
+STR_LIV_PANNON2                :Pannon2
+STR_LIV_SILVERARROW1           :Silverarrow1
+STR_LIV_SILVERFRONT1           :Silverfront1
+STR_LIV_STANDARD1              :Standard1
+STR_LIV_STANDARD2              :Standard2
+STR_LIV_STRIPE1                :Stripe1
+STR_LIV_STRIPE2                :Stripe2
+STR_LIV_STRIPED1               :Striped1
 STR_LIV_TOURIST                :Tourist
+STR_LIV_UPPER2                 :Upper2
 STR_LIV_VOLAN                  :Volan
+STR_LIV_WHITESTRIPE2           :Whitestripe2
 STR_LIV_ZALA                   :Zala

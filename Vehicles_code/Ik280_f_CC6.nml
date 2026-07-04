@@ -1,0 +1,123 @@
+// ---------- Ik280_f_CC6
+
+
+spriteset(ss_Ik280_f_CC6_purchase, "gfx/2xx/Ik280_f.png")		{tmpl_purchase(5)}
+spriteset(ss_Ik280_f_CC6_depo, "gfx/2xx/Ik280_f.png")		{tmpl_depo(5)}
+
+spriteset(ss_Ik280_f_CC6_a, "gfx/2xx/Ik280_f.png")		{tmpl_1(5, 1, 0, 0)}
+spriteset(ss_Ik280_f_CC6_a_loading, "gfx/2xx/Ik280_f.png")		{tmpl_1(5, 1, 1, 0)}
+spritegroup sg_Ik280_f_CC6_a {	loaded:  [ss_Ik280_f_CC6_a];	loading: [ss_Ik280_f_CC6_a_loading];}
+
+spriteset(ss_Ik280_f_CC6_b, "gfx/2xx/Ik280_f.png")		{tmpl_1(5, 2, 0, 0)}
+spriteset(ss_Ik280_f_CC6_b_loading, "gfx/2xx/Ik280_f.png")		{tmpl_1(5, 2, 1, 0)}
+spritegroup sg_Ik280_f_CC6_b {	loaded:  [ss_Ik280_f_CC6_b];	loading: [ss_Ik280_f_CC6_b_loading];}
+
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_depographic, position_in_consist ) {
+	1: ss_toldat;
+	ss_Ik280_f_CC6_depo;
+}
+
+// Játékban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_gamegraphic, position_in_consist ) {
+	1: sg_Ik280_f_CC6_b;
+	sg_Ik280_f_CC6_a;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik280_f_CC6_depographic; // Depot GUI
+	0x11: sw_Ik280_f_CC6_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik280_f_CC6_depographic; // Vehicle List
+	0x00: sw_Ik280_f_CC6_gamegraphic; // Vehicle in game
+}
+
+// Csuklosítás
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_articulated, extra_callback_info1) {
+	0: item_Ik280_f_CC6;
+	1: item_Ik280_f_CC6_t;
+	CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+// Modelhossz
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_length, position_in_consist) {
+	1: return 7;
+    return 8;
+}
+
+// Szövegek
+switch(FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_names, (extra_callback_info1 >> 8) & 0xFFFF) {
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_Fullbaseline)); // Almenü 1 név
+	return CB_RESULT_NO_TEXT;
+}
+
+switch(FEAT_ROADVEHS, SELF, sw_Ik280_f_CC6_texts, extra_callback_info1 & 0xFF) {
+	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_O1_4_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
+	0x20: sw_Ik280_f_CC6_names; // Vásárlási lista név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_EMPTY), string(STR_EMPTY)); // Elővásárlási név
+	return CB_RESULT_NO_TEXT;
+}
+
+// Item
+item(FEAT_ROADVEHS, item_Ik280_f_CC6) {
+	property {
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_280), string(STR_EMPTY), string(STR_EMPTY));
+		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+		introduction_date:   date(1980,01,01);
+		model_life:          30;
+		vehicle_life:        40;
+		reliability_decay:   20;
+		cargo_allow_refit:   [PASS,TOUR];
+		loading_speed:       40;
+		sprite_id:           SPRITE_ID_NEW_ROADVEH;
+		speed:               78 km/h;
+		misc_flags:          bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:          0;
+		running_cost_base:   RUNNING_COST_ROADVEH;
+		power:               160 kW;
+		weight:              14 ton;
+		cargo_capacity:      116;
+		cargo_age_period:    200;
+		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
+		badges:              ["type/bus", "livery/fullbaseline2", "power/diesel", "usage/suburb"];
+		variant_group:             item_Ik280_f_CC1;
+	}
+	graphics {
+		default:             sw_Ik280_f_CC6;
+		    // Cégszín deaktiválás, ha valós színű jármű
+		purchase:            ss_Ik280_f_CC6_purchase;
+		articulated_part:    sw_Ik280_f_CC6_articulated;
+		length:              sw_Ik280_f_CC6_length;
+		cost_factor:         21 * parapuco;
+		running_cost_factor: 27 * pararuco;
+		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_VFAST), 40, string(STR_COMFORT_4), 200, string(STR_O2_280_52), string(STR_O1_4_DOORS));
+		name:                sw_Ik280_f_CC6_texts; // Vásárlási almenü switch
+	}
+}
+// Csukló item
+item(FEAT_ROADVEHS, item_Ik280_f_CC6_t) {
+	property {
+		name:							string(STR_BUG);
+		climates_available:			bitmask(NO_CLIMATE);
+		introduction_date:				date(4999999,01,01);
+		cargo_allow_refit:				[PASS,TOUR];
+		loading_speed:					0;
+		cost_factor:					0;
+		running_cost_factor:			0;
+		sprite_id:						SPRITE_ID_NEW_ROADVEH;
+		misc_flags:					bitmask(ROADVEH_FLAG_2CC, ROADVEH_FLAG_SPRITE_STACK);
+		refit_cost:					0;
+		running_cost_base:				RUNNING_COST_NONE;
+		power:							0 kW;
+		weight:						0 ton;
+		cargo_capacity:				0;
+		cargo_age_period:				0;
+	}
+	graphics {
+		default:						sw_Ik280_f_CC6;
+		 // Cégszín deaktiválás, ha valós színű jármű
+		length:						sw_Ik280_f_CC6_length;
+	}
+}
+// ---------- Ik280_f_CC6 --- End
+

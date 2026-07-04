@@ -2,40 +2,52 @@
 
 
 spriteset(ss_Ik280_e_CC1_purchase, "gfx/2xx/Ik280_e.png")		{tmpl_purchase(0)}
+spriteset(ss_Ik280_e_CC1_depo, "gfx/2xx/Ik280_e.png")		{tmpl_depo(0)}
 
-spriteset(ss_Ik280_e_CC1_a, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 1, 0, 1)}
-spriteset(ss_Ik280_e_CC1_a_loading, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 1, 1, 1)}
+spriteset(ss_Ik280_e_CC1_a, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 1, 0, 0)}
+spriteset(ss_Ik280_e_CC1_a_loading, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 1, 1, 0)}
 spritegroup sg_Ik280_e_CC1_a {	loaded:  [ss_Ik280_e_CC1_a];	loading: [ss_Ik280_e_CC1_a_loading];}
 
 spriteset(ss_Ik280_e_CC1_b, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 2, 0, 0)}
 spriteset(ss_Ik280_e_CC1_b_loading, "gfx/2xx/Ik280_e.png")		{tmpl_1(0, 2, 1, 0)}
 spritegroup sg_Ik280_e_CC1_b {	loaded:  [ss_Ik280_e_CC1_b];	loading: [ss_Ik280_e_CC1_b_loading];}
 
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1_depographic, position_in_consist ) {
+	1: ss_toldat;
+	ss_Ik280_e_CC1_depo;
+}
+
 // Játékban grafika
-switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1, position_in_consist ) {
-	1: sg_Ik280_e_CC1_a;
-	2: sg_Ik280_e_CC1_b;
-	ss_toldat;
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1_gamegraphic, position_in_consist ) {
+	1: sg_Ik280_e_CC1_b;
+	sg_Ik280_e_CC1_a;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik280_e_CC1_depographic; // Depot GUI
+	0x11: sw_Ik280_e_CC1_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik280_e_CC1_depographic; // Vehicle List
+	0x00: sw_Ik280_e_CC1_gamegraphic; // Vehicle in game
 }
 
 // Csuklosítás
 switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1_articulated, extra_callback_info1) {
 	0: item_Ik280_e_CC1;
 	1: item_Ik280_e_CC1_t;
-	2: item_Ik280_e_CC1_t;
 	CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
 // Modelhossz
 switch (FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1_length, position_in_consist) {
-	1: return 8;
-	2: return 6;
-    return 1;
+	1: return 7;
+    return 8;
 }
 
 // Szövegek
 switch(FEAT_ROADVEHS, SELF, sw_Ik280_e_CC1_names, (extra_callback_info1 >> 8) & 0xFFFF) {
-	1: return string(STR_GEN_LIVERY, string(STR_LIV_CC1)); // Almenü 1 név
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_Fullbaseline)); // Almenü 1 név
 	return CB_RESULT_NO_TEXT;
 }
 
@@ -67,7 +79,7 @@ item(FEAT_ROADVEHS, item_Ik280_e_CC1) {
 		cargo_capacity:      144;
 		cargo_age_period:    200;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "power/diesel", "flag/flag_CC", "usage/city"];
+		badges:              ["type/bus", "livery/fullbaseline1", "power/diesel", "usage/city"];
 		// variant_group:             item_Ik280_e_CC1;
 	}
 	graphics {

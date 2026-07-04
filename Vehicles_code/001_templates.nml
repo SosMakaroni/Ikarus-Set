@@ -5,21 +5,21 @@ template tmpl_toldat() {
 spriteset(ss_toldat, "gfx/icons.png")		{tmpl_toldat()}
 //------------------------------------------------ toldat							
 template tmpl_purchase(szin) {
-	[570,				(szin*90)+80,									70,	16,	-35,	-9, ANIM]
+	[570,				(szin*90)+80,				70,	16,	-35, -9, ANIM]
 	}
-template tmpl_depo(szin,csuklo) {
-	[570,				(szin*90)+((csuklo-1)*30)+80,	99,	16,	-15,-2, ANIM]
+template tmpl_depo(szin) {
+	[570,				(szin*90)+110,				70,	16,	-16, -9, ANIM]
 	}
 
 template tmpl_1(szin,csuklo,rakodas,toldas){
 	[rakodas*280+10,	(szin*90)+((csuklo-1)*30)+80,	9,	29,	-3,	-5, ANIM]
-	[rakodas*280+20,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-32+(toldas*2),-13-(toldas*1), ANIM]
+	[rakodas*280+20,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-30+(toldas*2),-13-(toldas*1), ANIM]
 	[rakodas*280+60,	(szin*90)+((csuklo-1)*30)+80,	49,	29,	-38,-23, ANIM]
-	[rakodas*280+110,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-26+(toldas*2),-20+(toldas*1), ANIM]
+	[rakodas*280+110,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-25+(toldas*2),-20+(toldas*1), ANIM]
 	[rakodas*280+150,	(szin*90)+((csuklo-1)*30)+80,	9,	29,	-3,	-21, ANIM]
-	[rakodas*280+160,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-13-(toldas*2),-19+(toldas*1), ANIM]
+	[rakodas*280+160,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-14-(toldas*2),-19+(toldas*1), ANIM]
 	[rakodas*280+200,	(szin*90)+((csuklo-1)*30)+80,	49,	29,	-13,-23, ANIM]
-	[rakodas*280+250,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-7-(toldas*2),	-12-(toldas*1), ANIM]
+	[rakodas*280+250,	(szin*90)+((csuklo-1)*30)+80,	39,	29,	-9-(toldas*2),	-13-(toldas*1), ANIM]
 	}
 	
 

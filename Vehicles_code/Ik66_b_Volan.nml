@@ -2,15 +2,30 @@
 
 
 spriteset(ss_Ik66_b_Volan_purchase, "gfx/Old/Ik66_b.png")		{tmpl_purchase(2)}
+spriteset(ss_Ik66_b_Volan_depo, "gfx/Old/Ik66_b.png")		{tmpl_depo(2)}
 
 spriteset(ss_Ik66_b_Volan, "gfx/Old/Ik66_b.png")		{tmpl_1(2, 1, 0, 6)}
 spriteset(ss_Ik66_b_Volan_loading, "gfx/Old/Ik66_b.png")		{tmpl_1(2, 1, 1, 6)}
 spritegroup sg_Ik66_b_Volan {	loaded:  [ss_Ik66_b_Volan];	loading: [ss_Ik66_b_Volan_loading];}
 
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik66_b_Volan_depographic, position_in_consist ) {
+	1: ss_toldat;
+	ss_Ik66_b_Volan_depo;
+}
+
 // Játékban grafika
-switch (FEAT_ROADVEHS, SELF, sw_Ik66_b_Volan, position_in_consist ) {
+switch (FEAT_ROADVEHS, SELF, sw_Ik66_b_Volan_gamegraphic, position_in_consist ) {
 	1: sg_Ik66_b_Volan;
 	ss_toldat;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik66_b_Volan, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik66_b_Volan_depographic; // Depot GUI
+	0x11: sw_Ik66_b_Volan_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik66_b_Volan_depographic; // Vehicle List
+	0x00: sw_Ik66_b_Volan_gamegraphic; // Vehicle in game
 }
 
 // Csuklosítás
@@ -60,7 +75,7 @@ item(FEAT_ROADVEHS, item_Ik66_b_Volan) {
 		cargo_capacity:      80;
 		cargo_age_period:    185;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "power/diesel", "flag/HU", "usage/regional"];
+		badges:              ["type/bus", "livery/hungarian", "power/diesel", "usage/regional"];
 		variant_group:             item_Ik66_b_CC1;
 	}
 	graphics {

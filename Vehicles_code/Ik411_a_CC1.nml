@@ -2,15 +2,30 @@
 
 
 spriteset(ss_Ik411_a_CC1_purchase, "gfx/4xx/Ik411_a.png")		{tmpl_purchase(0)}
+spriteset(ss_Ik411_a_CC1_depo, "gfx/4xx/Ik411_a.png")		{tmpl_depo(0)}
 
 spriteset(ss_Ik411_a_CC1, "gfx/4xx/Ik411_a.png")		{tmpl_1(0, 1, 0, 2)}
 spriteset(ss_Ik411_a_CC1_loading, "gfx/4xx/Ik411_a.png")		{tmpl_1(0, 1, 1, 2)}
 spritegroup sg_Ik411_a_CC1 {	loaded:  [ss_Ik411_a_CC1];	loading: [ss_Ik411_a_CC1_loading];}
 
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1_depographic, position_in_consist ) {
+	1: ss_toldat;
+	ss_Ik411_a_CC1_depo;
+}
+
 // Játékban grafika
-switch (FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1, position_in_consist ) {
+switch (FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1_gamegraphic, position_in_consist ) {
 	1: sg_Ik411_a_CC1;
 	ss_toldat;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik411_a_CC1_depographic; // Depot GUI
+	0x11: sw_Ik411_a_CC1_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik411_a_CC1_depographic; // Vehicle List
+	0x00: sw_Ik411_a_CC1_gamegraphic; // Vehicle in game
 }
 
 // Csuklosítás
@@ -28,7 +43,7 @@ switch (FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1_length, position_in_consist) {
 
 // Szövegek
 switch(FEAT_ROADVEHS, SELF, sw_Ik411_a_CC1_names, (extra_callback_info1 >> 8) & 0xFFFF) {
-	1: return string(STR_GEN_LIVERY, string(STR_LIV_CC1)); // Almenü 1 név
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_Full)); // Almenü 1 név
 	return CB_RESULT_NO_TEXT;
 }
 
@@ -60,7 +75,7 @@ item(FEAT_ROADVEHS, item_Ik411_a_CC1) {
 		cargo_capacity:      100;
 		cargo_age_period:    200;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "power/diesel", "flag/flag_CC", "usage/city"];
+		badges:              ["type/bus", "livery/full1", "power/diesel", "usage/city"];
 		// variant_group:             item_Ik411_a_CC1;
 	}
 	graphics {

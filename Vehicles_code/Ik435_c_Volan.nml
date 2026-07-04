@@ -2,6 +2,7 @@
 
 
 spriteset(ss_Ik435_c_Volan_purchase, "gfx/4xx/Ik435_c.png")		{tmpl_purchase(1)}
+spriteset(ss_Ik435_c_Volan_depo, "gfx/4xx/Ik435_c.png")		{tmpl_depo(1)}
 
 spriteset(ss_Ik435_c_Volan_a, "gfx/4xx/Ik435_c.png")		{tmpl_1(1, 1, 0, 2)}
 spriteset(ss_Ik435_c_Volan_a_loading, "gfx/4xx/Ik435_c.png")		{tmpl_1(1, 1, 1, 2)}
@@ -11,11 +12,26 @@ spriteset(ss_Ik435_c_Volan_b, "gfx/4xx/Ik435_c.png")		{tmpl_1(1, 2, 0, 0)}
 spriteset(ss_Ik435_c_Volan_b_loading, "gfx/4xx/Ik435_c.png")		{tmpl_1(1, 2, 1, 0)}
 spritegroup sg_Ik435_c_Volan_b {	loaded:  [ss_Ik435_c_Volan_b];	loading: [ss_Ik435_c_Volan_b_loading];}
 
+// Infóban, depóban grafika
+switch (FEAT_ROADVEHS, SELF, sw_Ik435_c_Volan_depographic, position_in_consist ) {
+	1: ss_toldat;
+	2: ss_toldat;
+	ss_Ik435_c_Volan_depo;
+}
+
 // Játékban grafika
-switch (FEAT_ROADVEHS, SELF, sw_Ik435_c_Volan, position_in_consist ) {
+switch (FEAT_ROADVEHS, SELF, sw_Ik435_c_Volan_gamegraphic, position_in_consist ) {
 	1: sg_Ik435_c_Volan_a;
 	2: sg_Ik435_c_Volan_b;
 	ss_toldat;
+}
+
+// Grafika switch
+switch (FEAT_ROADVEHS, SELF, sw_Ik435_c_Volan, (extra_callback_info1 & 0x12) ) {
+	0x10: sw_Ik435_c_Volan_depographic; // Depot GUI
+	0x11: sw_Ik435_c_Volan_depographic; // Vehicle Details/Refit GUI
+	0x12: sw_Ik435_c_Volan_depographic; // Vehicle List
+	0x00: sw_Ik435_c_Volan_gamegraphic; // Vehicle in game
 }
 
 // Csuklosítás
@@ -67,7 +83,7 @@ item(FEAT_ROADVEHS, item_Ik435_c_Volan) {
 		cargo_capacity:      135;
 		cargo_age_period:    200;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "power/diesel", "flag/HU", "usage/suburb"];
+		badges:              ["type/bus", "livery/hungarian", "power/diesel", "usage/suburb"];
 		variant_group:             item_Ik435_c_CC1;
 	}
 	graphics {
