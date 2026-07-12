@@ -73,7 +73,7 @@ item(FEAT_ROADVEHS, item_IkE94LF_a_Volan) {
 		power:               270 kW;
 		weight:              13 ton;
 		cargo_capacity:      128;
-		cargo_age_period:    185;
+		cargo_age_period:    148;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
 		badges:              ["type/bus", "livery/hungarian", "power/diesel", "usage/regional"];
 		variant_group:             item_IkE94LF_a_CC1;
@@ -84,9 +84,9 @@ item(FEAT_ROADVEHS, item_IkE94LF_a_Volan) {
 		purchase:            ss_IkE94LF_a_Volan_purchase;
 		articulated_part:    sw_IkE94LF_a_Volan_articulated;
 		length:              sw_IkE94LF_a_Volan_length;
-		cost_factor:         27 * parapuco;
-		running_cost_factor: 41 * pararuco;
-		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_VFAST), 35, string(STR_COMFORT_3), 185, string(STR_EMPTY), string(STR_O1_3_DOORS));
+		cost_factor:         33 * parapuco;
+		running_cost_factor: 46 * pararuco;
+		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_VFAST), 35, string(STR_COMFORT_2), 148, string(STR_EMPTY), string(STR_O1_3_DOORS));
 		name:                sw_IkE94LF_a_Volan_texts; // Vásárlási almenü switch
 	}
 }

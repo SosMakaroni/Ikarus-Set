@@ -84,8 +84,8 @@ item(FEAT_ROADVEHS, item_Ik256_a_CC1) {
 		purchase:            ss_Ik256_a_CC1_purchase;
 		articulated_part:    sw_Ik256_a_CC1_articulated;
 		length:              sw_Ik256_a_CC1_length;
-		cost_factor:         16 * parapuco;
-		running_cost_factor: 21 * pararuco;
+		cost_factor:         14 * parapuco;
+		running_cost_factor: 19 * pararuco;
 		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_FAST), 10, string(STR_COMFORT_1), 100, string(STR_EMPTY), string(STR_O1_2_DOORS));
 		name:                sw_Ik256_a_CC1_texts; // Vásárlási almenü switch
 	}

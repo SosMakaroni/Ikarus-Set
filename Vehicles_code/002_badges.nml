@@ -278,6 +278,8 @@ badgetable {
 	"livery/standard2",
 	"livery/stripe1",
 	"livery/stripe2",
+	"livery/fullstripe1",
+	"livery/fullstripe2",
 	"livery/baseline1",
 	"livery/baseline2",
 	"livery/dualbaseline1",
@@ -519,6 +521,9 @@ spriteset(ss_livery_standard2, "gfx/icons.png")		{tmpl_badge_1812(20, 260)}
 spriteset(ss_livery_stripe1, "gfx/icons.png")       {tmpl_badge_1812(40, 240)}
 spriteset(ss_livery_stripe2, "gfx/icons.png")       {tmpl_badge_1812(40, 260)}
 
+spriteset(ss_livery_fullstripe1, "gfx/icons.png")       {tmpl_badge_1812(260, 240)}
+spriteset(ss_livery_fullstripe2, "gfx/icons.png")       {tmpl_badge_1812(260, 260)}
+
 spriteset(ss_livery_baseline1, "gfx/icons.png")     {tmpl_badge_1812(60, 240)}
 spriteset(ss_livery_baseline2, "gfx/icons.png")     {tmpl_badge_1812(60, 260)}
 
@@ -622,6 +627,24 @@ item (FEAT_BADGES, stripe2) {
         flags: bitmask(BADGE_FLAG_COPY_TO_RELATED_ENTITY, BADGE_FLAG_USE_COMPANY_COLOUR);
     }
     graphics { default: ss_livery_stripe2; }
+}
+
+// Fullstripe
+item (FEAT_BADGES, fullstripe1) {
+    property {
+        label: "livery/fullstripe1";
+        name: string(STR_LIV_Stripe);
+        flags: bitmask(BADGE_FLAG_COPY_TO_RELATED_ENTITY, BADGE_FLAG_USE_COMPANY_COLOUR);
+    }
+    graphics { default: ss_livery_fullstripe1; }
+}
+item (FEAT_BADGES, fullstripe2) {
+    property {
+        label: "livery/fullstripe2";
+        name: string(STR_LIV_Stripe);
+        flags: bitmask(BADGE_FLAG_COPY_TO_RELATED_ENTITY, BADGE_FLAG_USE_COMPANY_COLOUR);
+    }
+    graphics { default: ss_livery_fullstripe2; }
 }
 
 // Baseline

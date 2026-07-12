@@ -545,7 +545,7 @@ def generate_nml(row, cm, maps):
     lines.append(f"\t\tpower:               {Power} kW;")
     lines.append(f"\t\tweight:              {Weight} ton;")
     lines.append(f"\t\tcargo_capacity:      {Capacity};")
-    lines.append(f"\t\tcargo_age_period:    {Comfort};")
+    lines.append(f"\t\tcargo_age_period:    {round(float(Comfort))};")
     lines.append("\t\tsound_effect:        SOUND_DEPARTURE_MODERN_BUS;")
     lines.append(f"\t\tbadges:              [\"type/bus\"{BadgeLivery}{BadgeFuel}{BadgeUsage}];")
     lines.append(f"\t\t{Alapszin}variant_group:             item_{ItemID}_CC1;")
@@ -558,7 +558,7 @@ def generate_nml(row, cm, maps):
     lines.append(f"\t\tlength:              sw_{ItemID}_{Color}_length;")
     lines.append(f"\t\tcost_factor:         {PurchasePrice} * parapuco;")
     lines.append(f"\t\trunning_cost_factor: {Maintenance} * pararuco;")
-    lines.append(f"\t\tadditional_text:     string(STR_GEN_DATA, string({Lspeedstring[0]}), {LoadingSpeed or 0}, string({Comfstring[0]}), {Comfort or 0}, string({o2_id}), string({o1_id}));")            # Lspeedstring Comfstring
+    lines.append(f"\t\tadditional_text:     string(STR_GEN_DATA, string({Lspeedstring[0]}), {LoadingSpeed or 0}, string({Comfstring[0]}), {round(float(Comfort)) or 0}, string({o2_id}), string({o1_id}));")            # Lspeedstring Comfstring
     lines.append(f"\t\tname:                sw_{ItemID}_{Color}_texts; // Vásárlási almenü switch")
     lines.append("\t}")
     lines.append("}")

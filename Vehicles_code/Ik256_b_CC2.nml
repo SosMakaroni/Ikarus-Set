@@ -43,7 +43,7 @@ switch (FEAT_ROADVEHS, SELF, sw_Ik256_b_CC2_length, position_in_consist) {
 
 // Szövegek
 switch(FEAT_ROADVEHS, SELF, sw_Ik256_b_CC2_names, (extra_callback_info1 >> 8) & 0xFFFF) {
-	1: return string(STR_GEN_LIVERY, string(STR_LIV_Standard)); // Almenü 1 név
+	1: return string(STR_GEN_LIVERY, string(STR_LIV_Stripe)); // Almenü 1 név
 	return CB_RESULT_NO_TEXT;
 }
 
@@ -73,9 +73,9 @@ item(FEAT_ROADVEHS, item_Ik256_b_CC2) {
 		power:               160 kW;
 		weight:              11 ton;
 		cargo_capacity:      45;
-		cargo_age_period:    150;
+		cargo_age_period:    120;
 		sound_effect:        SOUND_DEPARTURE_MODERN_BUS;
-		badges:              ["type/bus", "livery/standard2", "power/diesel", "usage/intercity"];
+		badges:              ["type/bus", "livery/stripe2", "power/diesel", "usage/intercity"];
 		variant_group:             item_Ik256_b_CC1;
 	}
 	graphics {
@@ -84,9 +84,9 @@ item(FEAT_ROADVEHS, item_Ik256_b_CC2) {
 		purchase:            ss_Ik256_b_CC2_purchase;
 		articulated_part:    sw_Ik256_b_CC2_articulated;
 		length:              sw_Ik256_b_CC2_length;
-		cost_factor:         17 * parapuco;
+		cost_factor:         19 * parapuco;
 		running_cost_factor: 24 * pararuco;
-		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_FAST), 10, string(STR_COMFORT_2), 150, string(STR_EMPTY), string(STR_O1_2_DOORS));
+		additional_text:     string(STR_GEN_DATA, string(STR_LOSPE_FAST), 10, string(STR_COMFORT_2), 120, string(STR_EMPTY), string(STR_O1_2_DOORS));
 		name:                sw_Ik256_b_CC2_texts; // Vásárlási almenü switch
 	}
 }

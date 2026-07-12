@@ -3,7 +3,7 @@
 
 # GRF name and description definitions	
 STR_GRF_NAME					:Ikarus Set Classic
-STR_GRF_DESC					:{}{LTBLUE}Ikarus Set Classic{BLACK}{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.119 2026.07.04.
+STR_GRF_DESC					:{}{LTBLUE}Ikarus Set Classic{BLACK}{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.123 2026.07.12.
 
 STR_BUG							:HVW Toyland bug, sorry :(
 STR_EMPTY 						:
@@ -469,6 +469,7 @@ STR_O2_280_52                  :280.52
 STR_O2_280_52G                 :280.52G
 STR_O2_280_54                  :280.54
 STR_O2_C56_22                  :C56.22
+STR_O2_C56_32                  :C56.32
 STR_O2_C56_42                  :C56.42
 STR_O2_C60_30A                 :C60.30A
 STR_O2_C80_30A                 :C80.30A

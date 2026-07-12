@@ -109,6 +109,7 @@ STR_O2_280_52                  :280.52
 STR_O2_280_52G                 :280.52G
 STR_O2_280_54                  :280.54
 STR_O2_C56_22                  :C56.22
+STR_O2_C56_32                  :C56.32
 STR_O2_C56_42                  :C56.42
 STR_O2_C60_30A                 :C60.30A
 STR_O2_C80_30A                 :C80.30A
@@ -148,7 +149,7 @@ STR_LIV_STANDARD1              :Standard1
 STR_LIV_STANDARD2              :Standard2
 STR_LIV_STRIPE1                :Stripe1
 STR_LIV_STRIPE2                :Stripe2
-STR_LIV_STRIPED1               :Striped1
+STR_LIV_STRIPED2               :Striped2
 STR_LIV_TOURIST                :Tourist
 STR_LIV_UPPER2                 :Upper2
 STR_LIV_VOLAN                  :Volan
