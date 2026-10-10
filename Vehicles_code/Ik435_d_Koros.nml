@@ -58,14 +58,14 @@ switch(FEAT_ROADVEHS, SELF, sw_Ik435_d_Koros_names, (extra_callback_info1 >> 8) 
 switch(FEAT_ROADVEHS, SELF, sw_Ik435_d_Koros_texts, extra_callback_info1 & 0xFF) {
 	0x11: return string(STR_GEN_INFO, string(STR_MFR_IKARUS), string(STR_T1_435), string(STR_O1_4_DOORS)); // Jármű infóban név (Gyártó-Típus-Ajtó)
 	0x20: sw_Ik435_d_Koros_names; // Vásárlási lista név
-	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_435), string(STR_S1_FACELIFT), string(STR_EMPTY)); // Elővásárlási név
+	0x21: return string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_435), string(STR_S1_FACELIFT), 1999); // Elővásárlási név
 	return CB_RESULT_NO_TEXT;
 }
 
 // Item
 item(FEAT_ROADVEHS, item_Ik435_d_Koros) {
 	property {
-		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_435), string(STR_S1_FACELIFT), string(STR_EMPTY));
+		name:                string(STR_GEN_NAME, string(STR_MFR_IKARUS), string(STR_T1_435), string(STR_S1_FACELIFT), 1999);
 		climates_available:  bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
 		introduction_date:   date(1999,01,01);
 		model_life:          30;

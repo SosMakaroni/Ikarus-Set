@@ -3,7 +3,7 @@
 
 # GRF name and description definitions	
 STR_GRF_NAME					:Ikarus Set Classic
-STR_GRF_DESC					:{}{LTBLUE}Ikarus Set Classic{BLACK}{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.123 2026.07.12.
+STR_GRF_DESC					:{}{LTBLUE}Ikarus Set Classic{BLACK}{}{}{BLACK}Graphic:{GREEN}Colossal404{}{BLACK}Code:{GREEN}SosMakaroni{}{GRAY}License: GPLv2{}{BLACK}Ver.132 2026.10.08.
 
 STR_BUG							:HVW Toyland bug, sorry :(
 STR_EMPTY 						:
@@ -359,7 +359,7 @@ STR_LIV_VOLAN                  :Volan
 STR_LIV_ZALA                   :Zala
 
 STR_GEN_DATA :Loading speed: {STRING} {GOLD}({COMMA}){BLACK}{}Cargo againg speed: {STRING} {GOLD}({COMMA}){BLACK}{}Type: {GOLD}{STRING} {STRING}{BLACK}
-STR_GEN_NAME :{STRING} {STRING} {STRING} {STRING}
+STR_GEN_NAME :{STRING} {STRING}{STRING} {SILVER}{COMMA}{BLACK}
 STR_GEN_LIVERY :{STRING} livery
 STR_GEN_INFO :{STRING} {LTBLUE}- {STRING}{BLACK}
 
@@ -437,6 +437,32 @@ STR_T1_TR5                     :TR5
 
 # --- Sub1 ---
 STR_S1_TRAILER                 :+ Trailer
+STR_S1_00                      :.00
+STR_S1_01                      :.01
+STR_S1_03                      :.03
+STR_S1_04                      :.04
+STR_S1_06                      :.06
+STR_S1_10                      :.10
+STR_S1_17                      :.17
+STR_S1_20                      :.20
+STR_S1_22                      :.22
+STR_S1_30                      :.30
+STR_S1_30A                     :.30A
+STR_S1_31                      :.31
+STR_S1_32                      :.32
+STR_S1_37                      :.37
+STR_S1_40                      :.40
+STR_S1_40A                     :.40A
+STR_S1_42                      :.42
+STR_S1_43                      :.43
+STR_S1_44                      :.44
+STR_S1_46                      :.46
+STR_S1_49                      :.49
+STR_S1_52                      :.52
+STR_S1_52G                     :.52G
+STR_S1_54                      :.54
+STR_S1_59                      :.59
+STR_S1_ALFA                    :Alfa
 STR_S1_FACELIFT                :Facelift
 STR_S1_PROTO                   :Proto
 
@@ -463,8 +489,10 @@ STR_O2_263_06                  :263.06
 STR_O2_263_10                  :263.10
 STR_O2_280_00                  :280.00
 STR_O2_280_03                  :280.03
+STR_O2_280_17                  :280.17
 STR_O2_280_37                  :280.37
 STR_O2_280_40A                 :280.40A
+STR_O2_280_49                  :280.49
 STR_O2_280_52                  :280.52
 STR_O2_280_52G                 :280.52G
 STR_O2_280_54                  :280.54
